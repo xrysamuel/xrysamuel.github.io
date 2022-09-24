@@ -1,0 +1,161 @@
+* {
+    /* 清除所有的padding、margin和border */
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    background-color: #EFEEEE;
+    /* 禁止选中所有文本 */
+    -moz-user-select: none;
+    /*火狐*/
+    -webkit-user-select: none;
+    /*webkit浏览器*/
+    -ms-user-select: none;
+    /*IE10*/
+    -khtml-user-select: none;
+    /*早期浏览器*/
+    user-select: none;
+}
+
+#container {
+    background-color: inherit;
+    width: 600px;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    margin-left: -300px;
+    top: 50%;
+    margin-top: -200px;
+}
+
+#subcontainer {
+    background-color: inherit;
+    width: inherit;
+    height: inherit;
+    position: relative;
+}
+
+#searchFormBox {
+    height: 20%;
+    width: inherit;
+    position: relative;
+}
+
+#searchForm {
+    /* 搜索框的属性设置 */
+    position: absolute;
+    width: 500px;
+    height: 40px;
+    /* 盒子居中 */
+    top: 50%;
+    margin-top: -20px;
+    left: 50%;
+    margin-left: -250px;
+    /* 圆角属性，可以根据自己的喜好调节，50%盒子就是个圆形 */
+    border-radius: 20px;
+    /* 两个阴影属性，做出凸起的效果。 */
+    /* 第一个阴影为白色，向左和上移动 */
+    /* 第二个阴影为黑色，向右和下移动 */
+    /* 参数分别为：x方向偏移 y方向偏移 阴影模糊半径 颜色 */
+    box-shadow: 12px 12px 20px rgba(0, 0, 0, 0.2), -12px -12px 20px rgba(255, 255, 255, 1);
+}
+
+#searchInput {
+    width: 90%;
+    height: inherit;
+    margin-left: 20px;
+    background-color: inherit;
+    /* outline设置为none以隐藏点击搜索框的时候出现的黑色边框 */
+    outline: none;
+}
+
+#confirmInput {
+    width: 5%;
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    position: absolute;
+    right: 10;
+    top: 50%;
+    margin-top: -10px;
+    border-radius: 50%;
+    border-color: black;
+    border-width: thick;
+    border-style: solid;
+    outline: none;
+}
+
+#confirmInput:hover {
+    /* 鼠标悬停到确认按钮上变成手 */
+    cursor: pointer;
+}
+
+#iconsBox {
+    position: absolute;
+    /* 横向居中 */
+    left: 50%;
+    margin-left: -240px;
+    bottom: 0;
+    width: 480px;
+    height: 70%;
+}
+
+.icon {
+    background-color: inherit;
+    position: relative;
+    /* 左浮动布局 */
+    float: left;
+    width: 80px;
+    height: 80px;
+    margin: 20px;
+    border-radius: 20%;
+    box-shadow: 12px 12px 20px rgba(0, 0, 0, 0.2), -12px -12px 20px rgba(255, 255, 255, 1);
+    cursor: pointer;
+    /* 动画纸面下凹。 */
+    /* 参数：需要改变的样式 改变的时间 速度函数 */
+    transition: all .2s ease;
+}
+
+.icon>img {
+    /* 图片定位 */
+    position: absolute;
+    width: 46px;
+    height: 46px;
+    top: 50%;
+    margin-top: -30px;
+    left: 50%;
+    margin-left: -23px;
+}
+
+.icon>div {
+    /* 文本定位 */
+    position: absolute;
+    width: 60px;
+    bottom: 5px;
+    left: 50%;
+    margin-left: -30px;
+    text-align: center;
+}
+
+.icon>div>p {
+    /* 文本样式 */
+    color: #6B6B6B;
+    font-size: 12px;
+}
+
+#iconsBox>a:hover {
+    /* 盒子阴影 */
+    /*
+     * 四个参数：
+     * 前两个是黑白阴影从外阴影过渡到没有阴影
+     * 后连个是黑白阴影从没有阴影过渡到内阴影
+     */
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px rgba(255, 255, 255, 1), 12px 12px 20px rgba(0, 0, 0, 0.2) inset, -12px -12px 20px rgba(255, 255, 255, 1) inset;
+}
+
+#iconsBox>a:active {
+    /* 点击时改变样式，加深效果 */
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2) inset, -10px -10px 30px rgba(255, 255, 255, 1) inset;
+}
