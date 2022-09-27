@@ -108,7 +108,7 @@
 .momo-container .momo-msg-student .momo-msg-main .momo-msg-img img {
     margin: 3px;
     border-radius: 8px;
-    max-width: 300px;
+    max-width: 80%;
 }
  
 .momo-container .momo-msg-sensei {
