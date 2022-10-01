@@ -1,10 +1,16 @@
+@font-face {
+    font-family: 'MyFont';
+    src: url('assets/myfont-smaller.ttf') format('truetype');
+}
+
 .momo-container {
     margin: 10px auto;
     padding: 10px;
+    font-family: 'MyFont'
 }
  
 .momo-container .momo-main {
-    background: white;
+    background: rgb(255, 247, 227);
     border-radius: 5px;
 }
  
@@ -44,7 +50,7 @@
 .momo-container .momo-msg {
     border-radius: 8px;
     color: #FFF;
-    margin: 3px;
+    /*margin: 3px;*/
     padding: 5px 10px;
 }
  
@@ -92,6 +98,7 @@
  
 .momo-container .momo-msg-student .momo-msg-main .momo-msg {
     background: #4C5B70;
+    margin: 3px 24px 3px 3px;
 }
  
 .momo-container .momo-msg-student .momo-msg-main .momo-msg-first::after {
@@ -120,6 +127,7 @@
  
 .momo-container .momo-msg-sensei .momo-msg {
     background: #4A8ACA;
+    margin: 3px 3px 3px 48px;
 }
  
 .momo-container .momo-msg-sensei .momo-msg-first::after {
