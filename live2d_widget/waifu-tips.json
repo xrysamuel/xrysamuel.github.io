@@ -76,23 +76,15 @@
 			]
 		},
 		{
-			"selector": "#footer .left a",
-			"text": [
-				"这是我家主人(*´∇｀*)"
-			]
-		},
-		{
 			"selector": "a[rel='license']",
 			"text": [
-				"要记得规范转载哦。",
-				"网站采用 CC BY-NC 3.0 许可协议～",
-				"转载前要先注意下文章的版权协议呢。"
+				"本主题采用 CC BY-NC 3.0 许可协议"
 			]
 		},
 		{
 			"selector": ".link-note",
 			"text": [
-				"要去看看 <span>{text}</span> 这篇笔记吗？"
+				"要去看看<span>《{text}》</span>这篇笔记吗？"
 			]
 		},
 		{
