@@ -1,0 +1,662 @@
+<!DOCTYPE html><html><head>
+      <title>Figure-of-speech</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+.md-sidebar-toc.md-sidebar-toc {
+  font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+}
+.markdown-preview.markdown-preview {
+  font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  color: #333333;
+}
+.markdown-preview.markdown-preview blockquote {
+  padding: 5px 15px !important;
+}
+.markdown-preview.markdown-preview table {
+  display: table;
+  width: 100%;
+  max-width: 1024px;
+  border: none;
+}
+.markdown-preview.markdown-preview table th,
+.markdown-preview.markdown-preview table td {
+  height: 36px;
+  border: none;
+  padding: 0 10px;
+}
+.markdown-preview.markdown-preview table th {
+  font-weight: bold;
+  /* text-transform: uppercase;*/
+  text-align: center !important;
+  background: #cbdeff;
+}
+.markdown-preview.markdown-preview table tbody tr:nth-child(2n) {
+  background: #e3eeff;
+}
+.markdown-preview.markdown-preview table tbody tr:nth-child(2n+1) {
+  background: #ecf3ff;
+}
+.markdown-preview.markdown-preview table th {
+  white-space: nowrap;
+}
+.markdown-preview.markdown-preview table td:nth-child(1) {
+  white-space: nowrap;
+}
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="college-english-4-figure-of-speech">College English 4 - Figure of Speech</h1>
+
+<p><em>Time: 2022/10/13</em><br>
+<em>Author: XrySamuel</em><br>
+<em>Material: &#x82F1;&#x8BED;&#x4FEE;&#x8F9E;&#x683C;</em></p>
+<h2 class="mume-header" id="1-alliteration-%E6%8A%BC%E5%A4%B4%E9%9F%B5">1 Alliteration &#x62BC;&#x5934;&#x97F5;</h2>
+
+<p>Alliteration is the repetition of an initial consonant sound in successive words, as in &quot;a peck of pickled peppers.&quot;<br>
+Adjective: alliterative.<br>
+Also known as head rhyme, initial rhyme, and front rhyme.</p>
+<blockquote>
+<p>&quot;My father brought to&#xA0;conversations a&#xA0;cavernous&#xA0;capacity for&#xA0;caring that dismayed strangers.&quot; (John Updike,&#xA0;The Centaur, 1962)</p>
+</blockquote>
+<blockquote>
+<p>&quot;Come&#xA0;see the&#xA0;softer&#xA0;side of&#xA0;Sears.&quot; (advertising slogan)</p>
+</blockquote>
+<blockquote>
+<p>&quot;Good men are&#xA0;gruff and&#xA0;grumpy,&#xA0;cranky,&#xA0;crabbed, and&#xA0;cross.&quot; (Clement Freud)</p>
+</blockquote>
+<blockquote>
+<p>&quot;A&#xA0;moist young&#xA0;moon hung above the&#xA0;mist of a neighboring&#xA0;meadow.&quot; (Vladimir Nabokov,&#xA0;Conclusive Evidence, 1951)</p>
+</blockquote>
+<blockquote>
+<p>I&apos;d like to go <strong>b</strong>y climbing a <strong>b</strong>irch tree,<br>
+And climb <strong>b</strong>lack <strong>b</strong>ranches up a snow-white trunk<br>
+Toward heaven, till the tree could <strong>b</strong>ear no more,<br>
+<strong>B</strong>ut dipped its top and set me down again.<br>
+That would <strong>b</strong>e good <strong>b</strong>oth going and coming <strong>b</strong>ack.<br>
+One could do worse than <strong>b</strong>e a swinger of <strong>b</strong>irches.<br>
+(Robert Frost , The Birches)</p>
+</blockquote>
+<h2 class="mume-header" id="2-anaphora-%E9%A6%96%E8%AF%AD%E9%87%8D%E5%A4%8D">2 Anaphora &#x9996;&#x8BED;&#x91CD;&#x590D;</h2>
+
+<p>The repetition of the same word or phrase at the beginning of successive clauses or verses. (Contrast with epiphora and epistrophe.)</p>
+<blockquote>
+<p>&quot;We learned&#xA0;to &apos;diagram&apos; sentences with the solemn precision of scientists articulating chemical equations.&#xA0;We learned&#xA0;to read by reading aloud, and&#xA0;we learned&#xA0;to spell by spelling aloud.&quot; (Joyce Carol Oates, &quot;District School #7: Niagara County, New York.&quot;&#xA0;Faith of a Writer: Life, Craft, Art. HarperCollins, 2003)</p>
+</blockquote>
+<blockquote>
+<p>&quot;I needed&#xA0;a drink,&#xA0;I needed&#xA0;a lot of life insurance,&#xA0;I needed&#xA0;a vacation,&#xA0;I needed a home in the country. What I had was a coat, a hat and a gun.&quot; (Raymond Chandler,&#xA0;Farewell, My Lovely, 1940)</p>
+</blockquote>
+<blockquote>
+<p><strong>It rained on</strong> his lousy tombstone, and <strong>it rained on</strong> the grass on his stomach. <strong>It rained</strong> all over the place. (J.D. Salinger, The Catcher in the Rye)</p>
+</blockquote>
+<h2 class="mume-header" id="3-antithesis-%E5%AF%B9%E7%85%A7">3 Antithesis &#x5BF9;&#x7167;</h2>
+
+<p>Antithesis is a rhetorical term for the juxtaposition of contrasting ideas in balanced phrases or clauses.<br>
+Plural: antitheses.<br>
+Adjective: antithetical.</p>
+<p>In grammatical terms, antithetical statements are parallel structures.</p>
+<blockquote>
+<p>&quot;Love is an ideal thing, marriage a real thing.&quot; (Goethe)</p>
+</blockquote>
+<blockquote>
+<p>&quot;Everybody doesn&apos;t like something, but nobody doesn&apos;t like Sara Lee.&quot; (advertising slogan)</p>
+</blockquote>
+<blockquote>
+<p>We must all learn to <strong>live together as brothers</strong>&#x2014;or we will all <strong>perish together as fools</strong>.<br>
+(Martin Luther King, Jr)</p>
+</blockquote>
+<h2 class="mume-header" id="4-apostrophe-%E5%91%BC%E5%91%8A">4 Apostrophe &#x547C;&#x544A;</h2>
+
+<p>Apostrophe is a figure of speech in which some absent or nonexistent person or thing is addressed as if present and capable of understanding.</p>
+<blockquote>
+<p>&quot;Twinkle, twinkle, little star, How I wonder what you are. Up above the world so high, Like a diamond in the sky.&quot; (Jane Taylor, &quot;The Star,&quot; 1806)</p>
+</blockquote>
+<blockquote>
+<p>&quot;Hello darkness, my old friend, I&#x2019;ve come to talk with you again&quot; (Paul Simon, &quot;The Sound of Silence,&quot; 1964)</p>
+</blockquote>
+<blockquote>
+<p>Is this a dagger which I see before me,<br>
+The handle toward my hand? Come, let me clutch thee.<br>
+I have thee not, and yet I see thee still.<br>
+Art thou not, fatal vision, sensible<br>
+To feeling as to sight? (William Shakespeare, Macbeth)</p>
+</blockquote>
+<p><em>NOTE: Apostrophe pops up all over the place in Shakespeare, as his characters often address abstract ideas or inanimate objects while onstage. In Macbeth, while Macbeth is struggling with whether to follow through with a planned murder, he sees an apparition of a dagger and addresses it.</em></p>
+<h2 class="mume-header" id="5-assonance-%E6%8A%BC%E6%AF%8D%E9%9F%B5">5 Assonance &#x62BC;&#x6BCD;&#x97F5;</h2>
+
+<p>Assonance is the repetition of identical or similar vowel sounds in neighboring words (as in &quot;fish and chips&quot; and &quot;bad man&quot;).</p>
+<blockquote>
+<p>&quot;If I bleat when I speak it&apos;s because I just got fleeced.&quot; (Al Swearengen in&#xA0;Deadwood, 2004)</p>
+</blockquote>
+<blockquote>
+<p>&quot;A heart no bigger than an orange seed has ceased to beat.&quot; (James Salter, &quot;Am Strande von Tanger.&quot;&#xA0;Collected Stories. Pan Macmillan, 2013)</p>
+</blockquote>
+<blockquote>
+<p>&quot;It beats . . . as it sweeps . . . as it cleans!&quot; (advertising slogan for Hoover vacuum cleaners, 1950s)</p>
+</blockquote>
+<blockquote>
+<p>Here at the sm<strong>all</strong> field&#x2019;s ending p<strong>au</strong>se<br>
+Where the ch<strong>al</strong>k w<strong>all</strong> f<strong>all</strong>s to the foam and it&#x2019;s t<strong>all</strong> ledges<br>
+(W.H. Auden, &#x201C;Look, Stranger&#x201D;)</p>
+</blockquote>
+<h2 class="mume-header" id="6-chiasmus-%E4%BA%A4%E9%94%99%E9%85%8D%E5%88%97">6 Chiasmus &#x4EA4;&#x9519;&#x914D;&#x5217;</h2>
+
+<p>A verbal pattern in which the second half of an expression is balanced against the first but with the parts reversed.</p>
+<blockquote>
+<p>&quot;You forget what you want to remember, and you remember what you want to forget.&quot; (Cormac McCarthy,&#xA0;The Road, 2006)</p>
+</blockquote>
+<blockquote>
+<p>&quot;Nice to see you . . . to see you nice.&quot; (Chiastic&#xA0;catchphrase&#xA0;of British TV entertainer Bruce Forsyth)</p>
+</blockquote>
+<blockquote>
+<p>We <strong>shape</strong> our <strong>buildings</strong>, and afterward our <strong>buildings</strong> <strong>shape</strong> us. (Winston Churchill)</p>
+</blockquote>
+<h2 class="mume-header" id="7-euphemism-%E5%A7%94%E5%A9%89%E8%AF%AD">7 Euphemism &#x59D4;&#x5A49;&#x8BED;</h2>
+
+<p>Euphemism is the substitution of an inoffensive expression (such as &quot;passed away&quot;) for one considered offensively explicit (&quot;died&quot; or &quot;dropped dead&quot;).</p>
+<blockquote>
+<p>Pre-owned for used or second-hand;<br>
+enhanced interrogation for torture;<br>
+industrial action for strike;<br>
+misspoke for lie;<br>
+tactical withdrawal for retreat;<br>
+revenue augmentation for raising taxes;<br>
+wind for belch or fart;<br>
+convenience fee for surcharge;<br>
+courtesy reminder for bill;<br>
+unlawful combatant for prisoner of war</p>
+</blockquote>
+<blockquote>
+<p>Evans said that, behind closed doors, Walmart officials were more frank about the reasons the company was <strong>downsizing</strong> (= firing someone).<br>
+(The Washington Post)</p>
+</blockquote>
+<h2 class="mume-header" id="8-hyperbole-%E5%A4%B8%E5%BC%A0">8 Hyperbole &#x5938;&#x5F20;</h2>
+
+<p>An extravagant statement; the use of exaggerated terms for the purpose of emphasis or heightened effect.</p>
+<blockquote>
+<p>&quot;I was helpless. I did not know what in the world to do. I was quaking from head to foot and could have hung my hat on my eyes, they stuck out so far.&quot; (Mark Twain, &quot;Old Times on the Mississippi&quot;)</p>
+</blockquote>
+<blockquote>
+<p>&quot;He snorted and hit me in the solar plexus. &quot;I bent over and took hold of the room with both hands and spun it. When I had it nicely spinning I gave it a full swing and hit myself on the back of the head with the floor.&quot; (Raymond Chandler, &quot;Pearls Are a Nuisance,&quot; 1939)</p>
+</blockquote>
+<blockquote>
+<p>There was a fire-storm out there. Dresden was <strong>one big flame</strong>. The one flame ate everything organic, everything that would burn.<br>
+It wasn&apos;t safe to come out of the shelter until noon the next day. When the Americans and their guards did come out, the sky was <strong>black with smoke</strong>. The sun was an angry little pinhead. Dresden was like the moon now, nothing but minerals. The stones were hot. Everybody else in the neighborhood was dead. (Kurt Vonnegut, Slaughterhouse Five)</p>
+</blockquote>
+<p><em>NOTE: Kurt Vonnegut frequently uses hyperbole in his novels, for both dramatic and comedic effect. In this example from Slaughterhouse-Five, Billy Pilgrim emerges from an underground slaughterhouse where he has been held prisoner by the Germans during the deadly World War II firebombing of Dresden.</em></p>
+<p><em>Vonnegut&apos;s hyperbolic language, particularly his description of Dresden as &quot;one big flame,&quot; helps him convey the enormous devastation left by the bombs. So too does his statement that, &quot;the sky was black with smoke.&quot; While smoke from the bombs probably darkened the sky, it&apos;s improbable that the sky was completely black with smoke&#x2014;Vonnegut exaggerates to emphasize the extent of the damage, to capture what the damage felt like.</em></p>
+<h2 class="mume-header" id="9-irony-%E5%8F%8D%E8%AE%BD">9 Irony &#x53CD;&#x8BBD;</h2>
+
+<p>Irony is the use of words to convey the opposite of their literal meaning. Similarly, irony may be a statement or situation where the meaning is contradicted by the appearance or presentation of the idea.</p>
+<p>Three kinds of irony are commonly recognized:</p>
+<ul>
+<li>Verbal irony&#xA0;is a&#xA0;trope&#xA0;in which the intended meaning of a statement differs from the meaning that the words appear to express.</li>
+<li>Situational irony&#xA0;involves an incongruity between what is expected or intended and what actually occurs.</li>
+<li>Dramatic irony&#xA0;is an effect produced by a&#xA0;narrative&#xA0;in which the audience knows more about present or future circumstances than a character in the story.<br>
+&quot;Gentlemen, you can&apos;t fight in here! This is the War Room.&quot;</li>
+</ul>
+<blockquote>
+<p>&#x2026;historians should and must be precise, truthful and unprejudiced, without allowing self-interest or fear, hostility or affection, to turn them away from the path of truth, whose mother is history.<br>
+(Miguel de Cervantes, Don Quixote)</p>
+</blockquote>
+<p><em>NOTE: We can identify the above quotation as an example of verbal irony if we consider that the book&apos;s hero, Don Quixote, is fundamentally incapable of distinguishing truth from fiction, and any historian of his life would have to follow a double track of reality and fantasy which continuously overlaps, tangles, and flips. One of the most basic premises of the book is that truth is more difficult to identify than it may seem. Therefore, when the narrator vows to follow the single path of truth, he is being ironic; in reality, he believes this to be impossible.</em></p>
+<h2 class="mume-header" id="10-litotes-%E9%97%B4%E6%8E%A5%E8%82%AF%E5%AE%9A">10 Litotes &#x95F4;&#x63A5;&#x80AF;&#x5B9A;</h2>
+
+<p>Litotes is a figure of speech consisting of an understatement in which an affirmative is expressed by negating its opposite.</p>
+<blockquote>
+<p>&quot;I cannot say that I think you are very generous to the ladies; for, whilst you are proclaiming peace and good-will to men, emancipating all nations, you insist upon retaining an absolute power over wives.&quot; (Abigail Adams, letter to John Adams, May 7, 1776)</p>
+</blockquote>
+<blockquote>
+<p>But though I have wept and fasted, wept and prayed,<br>
+Though I have seen my head (grown slightly bald) brought in upon a platter,<br>
+I am <strong>no prophet</strong>&#x2014;and here&apos;s <strong>no great matter</strong><br>
+(T.S. Eliot, &#x201C;The Lovesong of J. Alfred Prufrock&#x201D;)</p>
+</blockquote>
+<h2 class="mume-header" id="11-metaphor-%E9%9A%90%E5%96%BB">11 Metaphor &#x9690;&#x55BB;</h2>
+
+<p>A metaphor is a trope or figure of speech in which an implied comparison is made between two unlike things that actually have something in common.</p>
+<p>A metaphor is said to express the unfamiliar (the tenor) in terms of the familiar (the vehicle). When Neil Young sings, &quot;Love is a rose,&quot; &quot;rose&quot; is the vehicle for &quot;love,&quot; the tenor.</p>
+<blockquote>
+<p>&quot;Humor is the shock absorber of life; it helps us take the blows.&quot; (Peggy Noonan,&#xA0;What I Saw at the Revolution, 1990)</p>
+</blockquote>
+<blockquote>
+<p>&quot;Time, you thief&quot; (Leigh Hunt, &quot;Rondeau&quot;)</p>
+</blockquote>
+<blockquote>
+<p>Gatsby believed in the <strong>green light</strong>, <strong>the orgastic future that year by year</strong> recedes before us. It eluded us then, but that&apos;s no matter&#x2014;tomorrow we will run faster, stretch out our arms farther.... And then one fine morning&#x2014;So we beat on, boats against the current, borne back ceaselessly into the past.<br>
+(F. Scott Fitzgerald, The Great Gatsby)</p>
+</blockquote>
+<h2 class="mume-header" id="12-onomatopoeia-%E8%B1%A1%E5%A3%B0%E8%AF%8D">12 Onomatopoeia &#x8C61;&#x58F0;&#x8BCD;</h2>
+
+<p>The use of words that imitate the sounds associated with the objects or actions they refer to.</p>
+<blockquote>
+<p>&quot;I&apos;m getting married in the morning! Ding dong!&#xA0;the bells are gonna chime.&quot; (Lerner and Loewe, &quot;Get Me to the Church on Time.&quot;&#xA0;My Fair Lady, 1956)</p>
+</blockquote>
+<blockquote>
+<p>&quot;Plop, plop, fizz, fizz, oh what a relief it is.&quot;(slogan of Alka Seltzer, U.S.)</p>
+</blockquote>
+<blockquote>
+<p>We heard the <strong>vroom</strong> of the car&#x2019;s engine as it <strong>whizzed</strong> by and <strong>screeched</strong> around the corner.</p>
+</blockquote>
+<h2 class="mume-header" id="13-oxymoron-%E7%9F%9B%E7%9B%BE%E4%BF%AE%E8%BE%9E%E6%B3%95">13 Oxymoron &#x77DB;&#x76FE;&#x4FEE;&#x8F9E;&#x6CD5;</h2>
+
+<p>An oxymoron is a figure of speech in which incongruous or seemingly contradictory terms appear side by side; a compressed paradox.</p>
+<blockquote>
+<p>&quot;That building is a&#xA0;little bit big&#xA0;and&#xA0;pretty ugly.&quot; (attributed to&#xA0;James Thurber)</p>
+</blockquote>
+<blockquote>
+<p>&quot;How is it possible to have a&#xA0;civil&#xA0;war?&quot; (George Carlin)</p>
+</blockquote>
+<blockquote>
+<p>&quot;No light but rather&#xA0;darkness visible.&quot; (John Milton,&#xA0;Paradise Lost)</p>
+</blockquote>
+<blockquote>
+<p>She held herself tight to him and her lips looked for his and then found them and were against them and he felt her, fresh, new and smooth and young and lovely with the <strong>warm</strong>, <strong>scalding coolness</strong> and unbelievable to be there in the robe that was as familiar as his clothes, or his shoes, or his duty and then she said, frightenedly, &#x201C;And now let us do quickly what it is we do so that the other is all gone.&#x201D; (Ernest Hemingway, For Whom the Bell Tolls)</p>
+</blockquote>
+<h2 class="mume-header" id="14-paradox-%E6%82%96%E8%AE%BA">14 Paradox &#x6096;&#x8BBA;</h2>
+
+<p>A paradox is a figure of speech in which a statement appears to contradict itself.</p>
+<blockquote>
+<p>&quot;Some of the biggest failures I ever had were successes.&quot; (attributed to American actress and singer Pearl Bailey)</p>
+</blockquote>
+<blockquote>
+<p>&quot;The swiftest traveler is he that goes afoot.&quot; (Henry David Thoreau,&#xA0;Walden, 1854)</p>
+</blockquote>
+<blockquote>
+<p>&quot;War is peace.&quot; &quot;Freedom is slavery.&quot; &quot;Ignorance is strength.&quot; (George Orwell,&#xA0;1984)</p>
+</blockquote>
+<blockquote>
+<p>The golden rule is that there are no golden rules. (George Bernard Shaw, Man and Superman)</p>
+</blockquote>
+<h2 class="mume-header" id="15-personification-%E6%8B%9F%E4%BA%BA">15 Personification &#x62DF;&#x4EBA;</h2>
+
+<p>Personification is a trope or figure of speech (generally considered a type of metaphor) in which an inanimate object or abstraction is given human qualities or abilities.</p>
+<blockquote>
+<p>The wind stood up and gave a shout. He whistled on his fingers<br>
+And Kicked the withered leaves about<br>
+And thumped the branches with his hand<br>
+And said he&apos;d kill and kill and kill,<br>
+And so he will! And so he will!     (James Stephens, &quot;The Wind&quot;)</p>
+</blockquote>
+<blockquote>
+<p>My heart danced when he walked in the room.</p>
+</blockquote>
+<blockquote>
+<p>The hair on my arms stood after the performance.</p>
+</blockquote>
+<h2 class="mume-header" id="16-pun-%E5%8F%8C%E5%85%B3">16 Pun &#x53CC;&#x5173;</h2>
+
+<p>A pun is a play on words, either on different senses of the same word or on the similar sense or sound of different words.</p>
+<p>Puns are figures of speech based on the inherent ambiguities of language. Although puns are commonly regarded as a childish form of humor, they are often found in advertisements and newspaper headlines.</p>
+<blockquote>
+<p>&quot;When it rains, it pours.&quot;(slogan of Morton Salt since 1911)</p>
+</blockquote>
+<blockquote>
+<p>&quot;When it pours, it reigns.&quot;(slogan of Michelin tires)</p>
+</blockquote>
+<blockquote>
+<p>Kings worry about a receding heir line.<br>
+&quot;What food these morsels be!&quot;(slogan of Heinz pickles, 1938)</p>
+</blockquote>
+<blockquote>
+<p>&quot;American Home has an edifice complex.&quot; (slogan of&#xA0;American Home&#xA0;magazine)</p>
+</blockquote>
+<blockquote>
+<p>&quot;Time flies like an arrow. Fruit flies like a banana.&quot;(Groucho Marx)</p>
+</blockquote>
+<blockquote>
+<p>As far as the piano is concerned, sentiment is my <strong>forte</strong> (strength; kind of marking in musical notation; pianoforte). (Oscar Wilde, The Importance of Being Earnest)</p>
+</blockquote>
+<h2 class="mume-header" id="17-simile-%E6%98%8E%E5%96%BB">17 Simile &#x660E;&#x55BB;</h2>
+
+<p>A simile is a figure of speech in which two fundamentally unlike things are explicitly compared, usually in a phrase introduced by like or as.</p>
+<blockquote>
+<p>&quot;Our last impression of her as she turned the corner was that smile, flung backward&#xA0;like a handful of flowers.&quot; (Wallace Stegner,&#xA0;Crossing to Safety, 1987)</p>
+</blockquote>
+<blockquote>
+<p><strong>Love</strong> is like <strong>war</strong>: easy to begin but very hard to stop. (H.L. Mencken)</p>
+</blockquote>
+<blockquote>
+<p>Keep love in your heart. <strong>A life without it</strong> is like <strong>a sunless garden</strong> when the flowers are dead. (Oscar Wilde)</p>
+</blockquote>
+<blockquote>
+<p><strong>Life</strong> is like <strong>writing with a pen</strong>. You can cross out your past but you can&#x2019;t erase it. (E.B. White)</p>
+</blockquote>
+<h2 class="mume-header" id="18-synecdoche-%E5%80%9F%E4%BB%A3">18 Synecdoche &#x501F;&#x4EE3;</h2>
+
+<p>A figure of speech in which a part is used to represent the whole (for example, ABCs for alphabet) or the whole for a part</p>
+<blockquote>
+<p>&quot;And let us mind, faint&#xA0;heart&#xA0;n&apos;er wan A lady fair.&quot; (Robert Burns, &quot;To Dr. Blalock&quot;)</p>
+</blockquote>
+<blockquote>
+<p>&quot;Rationalizing guilt is a common trait of&#xA0;white-collar&#xA0;criminals.&quot; (Larry J. Siegel,&#xA0;Criminology, 2012)</p>
+</blockquote>
+<blockquote>
+<p>It was the kind of voice that the <strong>ear</strong> (represents entire people enchanted by the voice the author is describing) follows up and down, as if each speech is an arrangement of notes that will never be played again. (F. Scott Fitzgerald, The Great Gatsby)</p>
+</blockquote>
+<h2 class="mume-header" id="19-understatement-%E8%BD%BB%E6%8F%8F%E6%B7%A1%E5%86%99">19 Understatement &#x8F7B;&#x63CF;&#x6DE1;&#x5199;</h2>
+
+<p>A figure of speech in which a writer or speaker deliberately makes a situation seem less important or serious than it is.</p>
+<blockquote>
+<p>&quot;I have to have this operation. It isn&apos;t very serious. I have this tiny little tumor on the brain.&quot; (Holden Caulfield in&#xA0;The Catcher In The Rye, by J. D. Salinger)</p>
+</blockquote>
+<blockquote>
+<p>Swimming with those starving sharks might be a bit unpleasant.</p>
+</blockquote>
+<h2 class="mume-header" id="20-metonymy-%E5%80%9F%E5%96%BB">20 Metonymy &#x501F;&#x55BB;</h2>
+
+<blockquote>
+<p>I need to decide if I will go <strong>Greek</strong> in college next year. (Greek is metonymy for sorority or fraternity membership)</p>
+</blockquote>
+<blockquote>
+<p>I met him at the reception when he took me for a <strong>spin</strong> during a slow song. (Spin is metonymy for dance)</p>
+</blockquote>
+<blockquote>
+<p>Next week, my boyfriend and I are headed to the <strong>altar</strong>. (Altar is metonymy for getting married)</p>
+</blockquote>
+
+      </div>
+      <div class="md-sidebar-toc"><ul>
+<li><a href="#college-english-4-figure-of-speech">College English 4 - Figure of Speech</a>
+<ul>
+<li><a href="#1-alliteration-%E6%8A%BC%E5%A4%B4%E9%9F%B5">1 Alliteration &#x62BC;&#x5934;&#x97F5;</a></li>
+<li><a href="#2-anaphora-%E9%A6%96%E8%AF%AD%E9%87%8D%E5%A4%8D">2 Anaphora &#x9996;&#x8BED;&#x91CD;&#x590D;</a></li>
+<li><a href="#3-antithesis-%E5%AF%B9%E7%85%A7">3 Antithesis &#x5BF9;&#x7167;</a></li>
+<li><a href="#4-apostrophe-%E5%91%BC%E5%91%8A">4 Apostrophe &#x547C;&#x544A;</a></li>
+<li><a href="#5-assonance-%E6%8A%BC%E6%AF%8D%E9%9F%B5">5 Assonance &#x62BC;&#x6BCD;&#x97F5;</a></li>
+<li><a href="#6-chiasmus-%E4%BA%A4%E9%94%99%E9%85%8D%E5%88%97">6 Chiasmus &#x4EA4;&#x9519;&#x914D;&#x5217;</a></li>
+<li><a href="#7-euphemism-%E5%A7%94%E5%A9%89%E8%AF%AD">7 Euphemism &#x59D4;&#x5A49;&#x8BED;</a></li>
+<li><a href="#8-hyperbole-%E5%A4%B8%E5%BC%A0">8 Hyperbole &#x5938;&#x5F20;</a></li>
+<li><a href="#9-irony-%E5%8F%8D%E8%AE%BD">9 Irony &#x53CD;&#x8BBD;</a></li>
+<li><a href="#10-litotes-%E9%97%B4%E6%8E%A5%E8%82%AF%E5%AE%9A">10 Litotes &#x95F4;&#x63A5;&#x80AF;&#x5B9A;</a></li>
+<li><a href="#11-metaphor-%E9%9A%90%E5%96%BB">11 Metaphor &#x9690;&#x55BB;</a></li>
+<li><a href="#12-onomatopoeia-%E8%B1%A1%E5%A3%B0%E8%AF%8D">12 Onomatopoeia &#x8C61;&#x58F0;&#x8BCD;</a></li>
+<li><a href="#13-oxymoron-%E7%9F%9B%E7%9B%BE%E4%BF%AE%E8%BE%9E%E6%B3%95">13 Oxymoron &#x77DB;&#x76FE;&#x4FEE;&#x8F9E;&#x6CD5;</a></li>
+<li><a href="#14-paradox-%E6%82%96%E8%AE%BA">14 Paradox &#x6096;&#x8BBA;</a></li>
+<li><a href="#15-personification-%E6%8B%9F%E4%BA%BA">15 Personification &#x62DF;&#x4EBA;</a></li>
+<li><a href="#16-pun-%E5%8F%8C%E5%85%B3">16 Pun &#x53CC;&#x5173;</a></li>
+<li><a href="#17-simile-%E6%98%8E%E5%96%BB">17 Simile &#x660E;&#x55BB;</a></li>
+<li><a href="#18-synecdoche-%E5%80%9F%E4%BB%A3">18 Synecdoche &#x501F;&#x4EE3;</a></li>
+<li><a href="#19-understatement-%E8%BD%BB%E6%8F%8F%E6%B7%A1%E5%86%99">19 Understatement &#x8F7B;&#x63CF;&#x6DE1;&#x5199;</a></li>
+<li><a href="#20-metonymy-%E5%80%9F%E5%96%BB">20 Metonymy &#x501F;&#x55BB;</a></li>
+</ul>
+</li>
+</ul>
+</div>
+      <a id="sidebar-toc-btn">&#x2261;</a>
+    
+    
+    
+    
+    
+    
+    
+    
+<script>
+
+var sidebarTOCBtn = document.getElementById('sidebar-toc-btn')
+sidebarTOCBtn.addEventListener('click', function(event) {
+  event.stopPropagation()
+  if (document.body.hasAttribute('html-show-sidebar-toc')) {
+    document.body.removeAttribute('html-show-sidebar-toc')
+  } else {
+    document.body.setAttribute('html-show-sidebar-toc', true)
+  }
+})
+</script>
+      
+  
+    </body></html>

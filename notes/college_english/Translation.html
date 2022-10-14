@@ -1,0 +1,458 @@
+<!DOCTYPE html><html><head>
+      <title>Translation</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+.md-sidebar-toc.md-sidebar-toc {
+  font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+}
+.markdown-preview.markdown-preview {
+  font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  color: #333333;
+}
+.markdown-preview.markdown-preview blockquote {
+  padding: 5px 15px !important;
+}
+.markdown-preview.markdown-preview table {
+  display: table;
+  width: 100%;
+  max-width: 1024px;
+  border: none;
+}
+.markdown-preview.markdown-preview table th,
+.markdown-preview.markdown-preview table td {
+  height: 36px;
+  border: none;
+  padding: 0 10px;
+}
+.markdown-preview.markdown-preview table th {
+  font-weight: bold;
+  /* text-transform: uppercase;*/
+  text-align: center !important;
+  background: #cbdeff;
+}
+.markdown-preview.markdown-preview table tbody tr:nth-child(2n) {
+  background: #e3eeff;
+}
+.markdown-preview.markdown-preview table tbody tr:nth-child(2n+1) {
+  background: #ecf3ff;
+}
+.markdown-preview.markdown-preview table th {
+  white-space: nowrap;
+}
+.markdown-preview.markdown-preview table td:nth-child(1) {
+  white-space: nowrap;
+}
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="college-english-4-translation">College English 4 - Translation</h1>
+
+<p><em>Time: 2022/10/11</em><br>
+<em>Author: XrySamuel</em><br>
+<em>Material: 4759-3-&#x6BB5;&#x843D;&#x7FFB;&#x8BD1;</em></p>
+<h2 class="mume-header" id="consideration-in-doing-translation">Consideration in doing translation</h2>
+
+<ul>
+<li>wording (appropriateness / variety, avoid monotony, use the words flexibly)</li>
+<li>be faithful to the source text semantically and stylistically</li>
+<li>use the grammar and sentence structures correctly and skillfully</li>
+<li>make good use of the translation skills (amplification, omission, conversion of word class, readjustment of the sentence order etc.)</li>
+<li>pay some attention to the cultural differences (do some interpretative translation) / culture transmission</li>
+</ul>
+<h2 class="mume-header" id="examples">Examples</h2>
+
+<h3 class="mume-header" id="example-1">Example 1</h3>
+
+<p>&#x4E2D;&#x56FD;&#x7684;&#x7236;&#x6BCD;&#x5F80;&#x5F80;&#x8FC7;&#x4E8E;&#x5173;&#x6CE8;&#x5B69;&#x5B50;&#x7684;&#x5B66;&#x4E60;&#xFF0C;&#x4EE5;&#x81F3;&#x4E8E;&#x4E0D;&#x8981;&#x4ED6;&#x4EEC;&#x5E2E;&#x5FD9;&#x505A;&#x5BB6;&#x52A1;&#x3002;&#x4ED6;&#x4EEC;&#x5BF9;&#x5B69;&#x5B50;&#x7684;&#x9996;&#x8981;&#x8981;&#x6C42;&#x5C31;&#x662F;&#x52AA;&#x529B;&#x5B66;&#x4E60;&#xFF0C;&#x8003;&#x5F97;&#x597D;&#xFF0C;&#x80FD;&#x4E0A;&#x540D;&#x724C;&#x5927;&#x5B66;&#x3002;&#x4ED6;&#x4EEC;&#x76F8;&#x4FE1;&#x8FD9;&#x662F;&#x4E3A;&#x5B69;&#x5B50;&#x597D;&#xFF0C;&#x56E0;&#x4E3A;&#x5728;&#x4E2D;&#x56FD;&#x8FD9;&#x6837;&#x7ADE;&#x4E89;&#x6FC0;&#x70C8;&#x7684;&#x793E;&#x4F1A;&#x91CC;&#xFF0C;&#x53EA;&#x6709;&#x597D;&#x6210;&#x7EE9;&#x624D;&#x80FD;&#x4FDD;&#x8BC1;&#x524D;&#x9014;&#x5149;&#x660E;&#x3002;&#x4E2D;&#x56FD;&#x7236;&#x6BCD;&#x8FD8;&#x8BA4;&#x4E3A;&#xFF0C;&#x5982;&#x679C;&#x5B69;&#x5B50;&#x5728;&#x793E;&#x4F1A;&#x4E0A;&#x53D6;&#x5F97;&#x5927;&#x7684;&#x6210;&#x5C31;&#xFF0C;&#x7236;&#x6BCD;&#x5C31;&#x4F1A;&#x53D7;&#x5230;&#x5C0A;&#x91CD;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x4ED6;&#x4EEC;&#x613F;&#x610F;&#x727A;&#x7272;&#x81EA;&#x5DF1;&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x7231;&#x597D;&#x548C;&#x5174;&#x8DA3;&#xFF0C;&#x4E3A;&#x5B69;&#x5B50;&#x63D0;&#x4F9B;&#x66F4;&#x597D;&#x7684;&#x6761;&#x4EF6;&#x3002;</p>
+<h4 class="mume-header" id="sentence-1">Sentence 1</h4>
+
+<blockquote>
+<p>&#x4E2D;&#x56FD;&#x7684;&#x7236;&#x6BCD; <strong>&#x5F80;&#x5F80;&#x8FC7;&#x4E8E;&#x5173;&#x6CE8;</strong> &#x5B69;&#x5B50;&#x7684;&#x5B66;&#x4E60;&#xFF0C;<strong>&#x4EE5;&#x81F3;&#x4E8E;</strong> &#x4E0D;&#x8981;&#x4ED6;&#x4EEC; <strong>&#x5E2E;&#x5FD9;</strong> &#x505A;&#x5BB6;&#x52A1;&#x3002;</p>
+</blockquote>
+<p><strong>Wording</strong>:</p>
+<p>tend to do / be prone to doing ? / be apt to do sth. / be apt at / be liable to do / be inclined to do</p>
+<p>pay undue / too much excessive attention to sth. / care too much about / be excessively involved in / be excessively concerned about / for / show too much concern for</p>
+<p>help sb. with housework / do one&apos;s share of housework / be involved in housework / partake housework ( = house chores)</p>
+<p><strong>Structure</strong>:</p>
+<p>adverbial clause of result</p>
+<ul>
+<li>so that</li>
+<li>too to</li>
+<li>to the point where</li>
+<li>to the point that</li>
+<li>so much so that</li>
+</ul>
+<p><strong>Reference</strong>:</p>
+<p>Chinese parents tend to invest heavily in their children&#x2019;s school work so much so that they do not involve their kids in any housework.</p>
+<h4 class="mume-header" id="sentence-2">Sentence 2</h4>
+
+<blockquote>
+<p>&#x4ED6;&#x4EEC;&#x5BF9;&#x5B69;&#x5B50;&#x7684; <strong>&#x9996;&#x8981;&#x8981;&#x6C42;</strong> &#x5C31;&#x662F; <strong>&#x52AA;&#x529B;&#x5B66;&#x4E60;</strong>&#xFF0C;<strong>&#x8003;&#x5F97;&#x597D;</strong>&#xFF0C;&#x80FD; <strong>&#x4E0A;&#x540D;&#x724C;&#x5927;&#x5B66;</strong>&#x3002;</p>
+</blockquote>
+<p><strong>Wording</strong>:</p>
+<p>main requirements / top concerns / top priorities</p>
+<p>study hard / work hard at one&apos;s study / study painstakingly / industriously / assiduously / diligently / be bent on one&apos;s study / apply oneself to one&apos;s study / stay focused on one&apos;s study / engross oneself in one&apos;s study / be absorbed in one&apos;s study</p>
+<p>do well in the exams / score high in the exams / to be a high-achiever in the exams / perform stunningly in the exams</p>
+<p>go to / attend / be accepted by / be enrolled in / be admitted to</p>
+<p>prestigious university / renowned university / internationally-acclaimed university / esteemed university / top-ranking university / world-famous university / great university / world-leading university</p>
+<p><strong>Structure</strong>:</p>
+<p>&#x7CFB;&#x8868;&#x7ED3;&#x6784;&#xFF0C;&#x52A8;&#x8BCD;&#x4E0D;&#x5B9A;&#x5F0F;&#x4F5C;&#x8868;&#x8BED;&#xFF1B;&#x5E73;&#x884C;&#x7ED3;&#x6784; Parallel structure</p>
+<p><strong>Reference</strong>:</p>
+<p>To them, the top concerns for their kids are to study hard, to earn high grades in exams, and to be accepted by prestigious universities.</p>
+<h4 class="mume-header" id="sentence-3">Sentence 3</h4>
+
+<blockquote>
+<p>&#x4ED6;&#x4EEC;&#x76F8;&#x4FE1;&#x8FD9;&#x662F; <strong>&#x4E3A;&#x5B69;&#x5B50;&#x597D;</strong>&#xFF0C;&#x56E0;&#x4E3A;&#x5728;&#x4E2D;&#x56FD;&#x8FD9;&#x6837; <strong>&#x7ADE;&#x4E89;&#x6FC0;&#x70C8;&#x7684;</strong> &#x793E;&#x4F1A;&#x91CC;&#xFF0C;<strong>&#x53EA;&#x6709;</strong> &#x597D;&#x6210;&#x7EE9; <strong>&#x624D;</strong> &#x80FD; <strong>&#x4FDD;&#x8BC1;&#x524D;&#x9014;&#x5149;&#x660E;</strong>&#x3002;</p>
+</blockquote>
+<p><strong>Wording</strong>:</p>
+<p>for the sake of the kids / for the good of the kids / in the interest of the kids / to the benefit of kids / benefit the kids / work in favour of the kids / put the kids in an favourable position</p>
+<p>highly competitive / acute competition / keen competition / fierce competition / intense competition / sharp competition / throat-cut competition / tough competition / strong competition</p>
+<p>only ... / nothing but / It is ... that (emphatic structure)</p>
+<p>ensure / guarantee / make sure that / assure sb. of sth. / a must for sth.</p>
+<p>a bright future / a promising future / a good prospect / a bright prospect / a rosy future</p>
+<p><strong>Structure</strong>:</p>
+<p>Object clause&#xFF1A;The believe that ... / They are convinced that ...<br>
+Subject clause / Impersonal subject pattern: It is their firm belief that ...</p>
+<p><strong>Reference</strong>:</p>
+<p>They believe that such expectations are in the interests of their children, because it is nothing but good grades that can ensure a bright prospect in such a highly competitive Chinese society.</p>
+<h4 class="mume-header" id="sentence-4">Sentence 4</h4>
+
+<blockquote>
+<p>&#x4E2D;&#x56FD;&#x7236;&#x6BCD;&#x8FD8; <strong>&#x8BA4;&#x4E3A;</strong>&#xFF0C;&#x5982;&#x679C;&#x5B69;&#x5B50;&#x5728;&#x793E;&#x4F1A;&#x4E0A; <strong>&#x53D6;&#x5F97;&#x5927;&#x7684;&#x6210;&#x5C31;</strong>&#xFF0C;&#x7236;&#x6BCD;&#x5C31;&#x4F1A;<strong>&#x53D7;&#x5230;&#x5C0A;&#x91CD;</strong>&#x3002;</p>
+</blockquote>
+<p><strong>Wording</strong>:</p>
+<p>consider / believe / think / maintain / claim / argue / insist / reckon / suppose / surmise / assume / suspect / assert / hold the view that / in one&apos;s opinion / as sb. sees it / as far as sb. be concerned / to the best of one&apos;s knowledge / as far as sb. knows / according to one&apos;s understanding</p>
+<p>make great achievement / earn great achievement / make a great success / score great achievements / make great fulfillments / make commendable achievements / make stunning achievements / make admirable achievements</p>
+<p>earn respect / be respected by others / win due respect / be revered by others</p>
+<p><strong>Structure</strong>:</p>
+<p>&#x5BBE;&#x8BED;&#x4ECE;&#x53E5;<br>
+&#x6761;&#x4EF6;&#x72B6;&#x8BED;&#x4ECE;&#x53E5;</p>
+<p><strong>Reference</strong>:</p>
+<p>Also, Chinese parents insist that they will be duly respected only if their children have made commendable achievements in the society.</p>
+<p>(Adjustment of sentence order)</p>
+<h4 class="mume-header" id="sentence-5">Sentence 5</h4>
+
+<blockquote>
+<p><strong>&#x56E0;&#x6B64;</strong>&#xFF0C;&#x4ED6;&#x4EEC; <strong>&#x613F;&#x610F;&#x727A;&#x7272;</strong> &#x81EA;&#x5DF1;&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x7231;&#x597D;&#x548C;&#x5174;&#x8DA3;&#xFF0C;&#x4E3A;&#x5B69;&#x5B50; <strong>&#x63D0;&#x4F9B;</strong> &#x66F4;&#x597D;&#x7684; <strong>&#x6761;&#x4EF6;</strong>&#x3002;</p>
+</blockquote>
+<p><strong>Wording</strong>:</p>
+<p>as a result, / therefore, / thus, / consequently, / as a consequence, / hence</p>
+<p>be willing to do / offer to do / be ready to do / take delight in / derive much entertainment from / would rather do</p>
+<p>sacrifice A for B / make sacrifices for sth.</p>
+<p>provide sb. with sth. / provide sth. for sb. / offer sb. sth. / offer sth. to sb. / supply sb. with sth. / supply sth. to sb. / furnish sb. with sth.</p>
+<p>conditions (&#x73AF;&#x5883; v.s. condition &#x72B6;&#x6001;)</p>
+<p><strong>Reference</strong>:</p>
+<p>As a result, for the kids&apos; sake they would rather sacrifice the time, hobbies and interest of their own for the better living conditions.</p>
+<h2 class="mume-header" id="example-2">Example 2</h2>
+
+<p>&#x516C;&#x5143;&#x524D;551&#x5E74;&#xFF0C;&#x5728;&#x4ECA;&#x5929;&#x7684;&#x5C71;&#x4E1C;&#x7701;&#x66F2;&#x961C;&#x8BDE;&#x751F;&#x4E86;&#x4E2D;&#x56FD;&#x53E4;&#x4EE3;&#x8457;&#x540D;&#x7684;&#x601D;&#x60F3;&#x5BB6;&#x3001;&#x6559;&#x80B2;&#x5BB6;&#x5B54;&#x5B50;&#x3002;&#x5B54;&#x5B50;&#x7684;&#x5BB6;&#x91CC;&#x5341;&#x5206;&#x8D2B;&#x7A77;&#xFF0C;&#x4F46;&#x662F;&#x4ED6;&#x4ECE;&#x5C0F;&#x5C31;&#x8BA4;&#x771F;&#x8BFB;&#x4E66;&#xFF0C;&#x523B;&#x82E6;&#x5B66;&#x4E60;&#x3002;20&#x591A;&#x5C81;&#x7684;&#x65F6;&#x5019;&#x505A;&#x4E86;&#x4E2A;&#x5C0F;&#x5B98;&#x3002;&#x4ED6;&#x5F88;&#x6709;&#x5B66;&#x95EE;&#xFF0C;&#x529E;&#x4E8B;&#x8BA4;&#x771F;&#xFF0C;&#x5DE5;&#x4F5C;&#x51FA;&#x8272;&#xFF0C;30&#x5C81;&#x5DE6;&#x53F3;&#x5C31;&#x5DF2;&#x7ECF;&#x5F88;&#x6709;&#x540D;&#x4E86;&#x3002;&#x5B54;&#x5B50;&#x5230;&#x8FC7;&#x8BB8;&#x591A;&#x8BF8;&#x4FAF;&#x56FD;&#x5BB6;&#xFF0C;&#x60F3;&#x4E3A;&#x5404;&#x56FD;&#x541B;&#x738B;&#x6548;&#x529B;&#xFF0C;&#x4F46;&#x662F;&#x4ED6;&#x4EEC;&#x90FD;&#x4E0D;&#x63A5;&#x53D7;&#x4ED6;&#x7684;&#x653F;&#x6CBB;&#x4E3B;&#x5F20;&#x3002;&#x4E8E;&#x662F;&#x5B54;&#x5B50;&#x51B3;&#x5FC3;&#x7528;&#x81EA;&#x5DF1;&#x5168;&#x90E8;&#x7684;&#x7CBE;&#x529B;&#x6765;&#x529E;&#x5B66;&#x3002;&#x5F88;&#x591A;&#x4EBA;&#x77E5;&#x9053;&#x8FD9;&#x6D88;&#x606F;&#x4E4B;&#x540E;&#xFF0C;&#x90FD;&#x628A;&#x81EA;&#x5DF1;&#x7684;&#x5B69;&#x5B50;&#x9001;&#x6765;&#x62DC;&#x5B54;&#x5B50;&#x4E3A;&#x5E08;&#x3002;&#x5B54;&#x5B50;&#x6536;&#x4E0B;&#x4E86;&#x8FD9;&#x4E9B;&#x5B66;&#x751F;&#xFF0C;&#x5F00;&#x521B;&#x4E86;&#x4E2D;&#x56FD;&#x6559;&#x80B2;&#x53F2;&#x4E0A;&#x7684;&#x79C1;&#x4EBA;&#x8BB2;&#x5B66;&#x4E8B;&#x4E1A;&#x3002;</p>
+<blockquote>
+<p>&#x516C;&#x5143;&#x524D;551&#x5E74;&#xFF0C;&#x5728;&#x4ECA;&#x5929;&#x7684;&#x5C71;&#x4E1C;&#x7701;&#x66F2;&#x961C;&#x8BDE;&#x751F;&#x4E86;&#x4E2D;&#x56FD;&#x53E4;&#x4EE3;&#x8457;&#x540D;&#x7684;&#x601D;&#x60F3;&#x5BB6;&#x3001;&#x6559;&#x80B2;&#x5BB6;&#x5B54;&#x5B50;&#x3002;</p>
+</blockquote>
+<p>Translation skills: S + V + O (key structure) &#x5148;&#x7FFB;&#x4E3B;&#x8C13;&#x5BBE;&#xFF0C;&#x540E;&#x52A0;&#x5B9A;&#x72B6;&#x8865;</p>
+<p>Proper name: &#x5B54;&#x5B50; - Confucius</p>
+<p>(In the year of 551 B.C.,) Confucius (, the famous / eminent / renowned / noted / celebrated thinker and educator in ancient China) was born in (today&apos;s Qufu of Shandong Province)</p>
+<p><strong>Reference</strong>:</p>
+<p>In the year 551 B.C., Confucius, the famous thinker and educator of ancient China, was born in today&#x2019;s Qufu, Shandong Province. His family was very poor, but he worked hard at his studies even in early childhood. He became a petty official in his early twenties. As he had great learning, worked in earnest and was outstanding in performing his duties, he had already earned a high reputation by the age of thirty. Confucius visited many principalities in the hope of rendering service to the princes, but none of them would accept his political views. Consequently, he changed his mind and decided to devote all his energies to education. When people learned about this, many of them sent their children to him to be educated. Confucius accepted them as his students, and thus he became the first individual to initiate a private school in the history of Chinese education.</p>
+
+      </div>
+      <div class="md-sidebar-toc"><ul>
+<li><a href="#college-english-4-translation">College English 4 - Translation</a>
+<ul>
+<li><a href="#consideration-in-doing-translation">Consideration in doing translation</a></li>
+<li><a href="#examples">Examples</a>
+<ul>
+<li><a href="#example-1">Example 1</a>
+<ul>
+<li><a href="#sentence-1">Sentence 1</a></li>
+<li><a href="#sentence-2">Sentence 2</a></li>
+<li><a href="#sentence-3">Sentence 3</a></li>
+<li><a href="#sentence-4">Sentence 4</a></li>
+<li><a href="#sentence-5">Sentence 5</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#example-2">Example 2</a></li>
+</ul>
+</li>
+</ul>
+</div>
+      <a id="sidebar-toc-btn">&#x2261;</a>
+    
+    
+    
+    
+    
+    
+    
+    
+<script>
+
+var sidebarTOCBtn = document.getElementById('sidebar-toc-btn')
+sidebarTOCBtn.addEventListener('click', function(event) {
+  event.stopPropagation()
+  if (document.body.hasAttribute('html-show-sidebar-toc')) {
+    document.body.removeAttribute('html-show-sidebar-toc')
+  } else {
+    document.body.setAttribute('html-show-sidebar-toc', true)
+  }
+})
+</script>
+      
+  
+    </body></html>
