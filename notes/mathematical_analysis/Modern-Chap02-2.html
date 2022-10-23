@@ -511,45 +511,472 @@ pre[data-line] .line-highlight[data-end]:after {
   content: "\E244";
 }
 
-.md-sidebar-toc.md-sidebar-toc {
-  font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
-}
-.markdown-preview.markdown-preview {
-  font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
-  color: #333333;
-}
-.markdown-preview.markdown-preview blockquote {
+blockquote {
   padding: 5px 15px !important;
 }
-.markdown-preview.markdown-preview table {
-  display: table;
+.md-sidebar-toc ul li {
+  font-size: 16px;
+}
+.md-sidebar-toc ul ul li {
+  font-size: 14px;
+}
+.md-sidebar-toc ul ul ul li {
+  font-size: 12px;
+}
+.md-sidebar-toc ul ul ul ul li {
+  font-size: 10px;
+}
+html body {
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: hsl(220, 14%, 71%);
+  background-color: hsl(220, 13%, 18%);
+  overflow: initial;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+html body > :first-child {
+  margin-top: 0;
+}
+html body h1,
+html body h2,
+html body h3,
+html body h4,
+html body h5,
+html body h6 {
+  line-height: 1.2;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  color: hsl(0, 0%, 100%);
+}
+html body h1 {
+  font-size: 2.25em;
+  font-weight: 300;
+  padding-bottom: 0.3em;
+}
+html body h2 {
+  font-size: 1.75em;
+  font-weight: 400;
+  padding-bottom: 0.3em;
+}
+html body h3 {
+  font-size: 1.5em;
+  font-weight: 500;
+}
+html body h4 {
+  font-size: 1.25em;
+  font-weight: 600;
+}
+html body h5 {
+  font-size: 1.1em;
+  font-weight: 600;
+}
+html body h6 {
+  font-size: 1em;
+  font-weight: 600;
+}
+html body h1,
+html body h2,
+html body h3,
+html body h4,
+html body h5 {
+  font-weight: 600;
+}
+html body h5 {
+  font-size: 1em;
+}
+html body h6 {
+  color: hsl(220, 14%, 55%);
+}
+html body strong {
+  color: hsl(0, 0%, 100%);
+}
+html body del {
+  color: hsl(220, 14%, 55%);
+}
+html body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+html body a {
+  color: #56b6c2;
+  text-decoration: none;
+}
+html body a:hover {
+  color: #74c3cd;
+  text-decoration: none;
+}
+html body img {
+  max-width: 100%;
+}
+html body > p {
+  margin-top: 0;
+  margin-bottom: 16px;
+  word-wrap: break-word;
+}
+html body > ul,
+html body > ol {
+  margin-bottom: 16px;
+}
+html body ul,
+html body ol {
+  padding-left: 2em;
+}
+html body ul.no-list,
+html body ol.no-list {
+  padding: 0;
+  list-style-type: none;
+}
+html body ul ul,
+html body ul ol,
+html body ol ol,
+html body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+html body li {
+  margin-bottom: 0;
+}
+html body li.task-list-item {
+  list-style: none;
+}
+html body li > p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+html body .task-list-item-checkbox {
+  margin: 0 0.2em 0.25em -1.8em;
+  vertical-align: middle;
+}
+html body .task-list-item-checkbox:hover {
+  cursor: pointer;
+}
+html body blockquote {
+  margin: 16px 0;
+  font-size: inherit;
+  padding: 0 15px;
+  color: hsl(220, 14%, 55%);
+  background-color: hsl(220, 13%, 26%);
+  border-left: 4px solid hsl(220, 13%, 34%);
+}
+html body blockquote > :first-child {
+  margin-top: 0;
+}
+html body blockquote > :last-child {
+  margin-bottom: 0;
+}
+html body hr {
+  height: 4px;
+  margin: 32px 0;
+  background-color: hsl(220, 13%, 34%);
+  border: 0 none;
+}
+html body table {
+  margin: 10px 0 15px 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  display: block;
   width: 100%;
-  max-width: 1024px;
-  border: none;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
 }
-.markdown-preview.markdown-preview table th,
-.markdown-preview.markdown-preview table td {
-  height: 36px;
-  border: none;
-  padding: 0 10px;
-}
-.markdown-preview.markdown-preview table th {
+html body table th {
   font-weight: bold;
-  /* text-transform: uppercase;*/
-  text-align: center !important;
-  background: #cbdeff;
+  color: hsl(0, 0%, 100%);
 }
-.markdown-preview.markdown-preview table tbody tr:nth-child(2n) {
-  background: #e3eeff;
+html body table td,
+html body table th {
+  border: 1px solid hsl(220, 13%, 34%);
+  padding: 6px 13px;
 }
-.markdown-preview.markdown-preview table tbody tr:nth-child(2n+1) {
-  background: #ecf3ff;
+html body dl {
+  padding: 0;
 }
-.markdown-preview.markdown-preview table th {
-  white-space: nowrap;
+html body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
 }
-.markdown-preview.markdown-preview table td:nth-child(1) {
-  white-space: nowrap;
+html body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+html body code {
+  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-size: 0.85em !important;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(220, 13%, 26%);
+  border-radius: 3px;
+  padding: 0.2em 0;
+}
+html body code::before,
+html body code::after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+html body pre > code {
+  padding: 0;
+  margin: 0;
+  font-size: 0.85em !important;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+html body .highlight {
+  margin-bottom: 16px;
+}
+html body .highlight pre,
+html body pre {
+  padding: 1em;
+  overflow: auto;
+  font-size: 0.85em !important;
+  line-height: 1.45;
+  border: hsl(220, 13%, 34%);
+  border-radius: 3px;
+}
+html body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+html body pre code,
+html body pre tt {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+html body pre code:before,
+html body pre tt:before,
+html body pre code:after,
+html body pre tt:after {
+  content: normal;
+}
+html body p,
+html body blockquote,
+html body ul,
+html body ol,
+html body dl,
+html body pre {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+html body kbd {
+  color: hsl(0, 0%, 100%);
+  border: 1px solid hsl(220, 13%, 34%);
+  border-bottom: 2px solid hsl(220, 13%, 28%);
+  padding: 2px 4px;
+  background-color: hsl(220, 13%, 26%);
+  border-radius: 3px;
+}
+@media print {
+  html body {
+    background-color: hsl(220, 13%, 18%);
+  }
+  html body h1,
+  html body h2,
+  html body h3,
+  html body h4,
+  html body h5,
+  html body h6 {
+    color: hsl(0, 0%, 100%);
+    page-break-after: avoid;
+  }
+  html body blockquote {
+    color: hsl(220, 14%, 55%);
+  }
+  html body pre {
+    page-break-inside: avoid;
+  }
+  html body table {
+    display: table;
+  }
+  html body img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  html body pre,
+  html body code {
+    word-wrap: break-word;
+    white-space: pre;
+  }
+}
+pre {
+  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+  line-height: 1.5;
+  tab-size: 4;
+  hyphens: none;
+  color: #abb2bf !important;
+  background-color: #31363f !important;
+  border: #4b5362;
+  border-radius: 3px;
+}
+pre[class*="language-"] {
+  padding: 1em;
+}
+code[class*="language-"] .token.comment,
+pre[class*="language-"] .token.comment,
+code[class*="language-"] .token.prolog,
+pre[class*="language-"] .token.prolog,
+code[class*="language-"] .token.doctype,
+pre[class*="language-"] .token.doctype,
+code[class*="language-"] .token.cdata,
+pre[class*="language-"] .token.cdata {
+  color: #5c6370;
+}
+code[class*="language-"] .namespace,
+pre[class*="language-"] .namespace {
+  opacity: 0.7;
+}
+code[class*="language-"] .token.constant,
+pre[class*="language-"] .token.constant {
+  color: #d19a66;
+}
+code[class*="language-"] .token.boolean,
+pre[class*="language-"] .token.boolean,
+code[class*="language-"] .token.number,
+pre[class*="language-"] .token.number,
+code[class*="language-"] .token.function-name,
+pre[class*="language-"] .token.function-name {
+  color: #d19a66;
+}
+code[class*="language-"] .token.tag,
+pre[class*="language-"] .token.tag {
+  color: #e06c75;
+}
+code[class*="language-"] .token.symbol,
+pre[class*="language-"] .token.symbol {
+  color: #56b6c2;
+}
+code[class*="language-"] .token.selector,
+pre[class*="language-"] .token.selector {
+  color: #c678dd;
+}
+code[class*="language-"] .token.attr-name,
+pre[class*="language-"] .token.attr-name {
+  color: #d19a66;
+}
+code[class*="language-"] .token.string,
+pre[class*="language-"] .token.string {
+  color: #98c379;
+}
+code[class*="language-"] .token.char,
+pre[class*="language-"] .token.char {
+  color: #56b6c2;
+}
+code[class*="language-"] .token.url,
+pre[class*="language-"] .token.url {
+  color: #56b6c2;
+}
+code[class*="language-"] .token.operator,
+pre[class*="language-"] .token.operator {
+  color: #abb2bf;
+}
+code[class*="language-"] .token.atrule,
+pre[class*="language-"] .token.atrule,
+code[class*="language-"] .token.attr-value,
+pre[class*="language-"] .token.attr-value,
+code[class*="language-"] .token.keyword,
+pre[class*="language-"] .token.keyword {
+  color: #c678dd;
+}
+code[class*="language-"] .token.function,
+pre[class*="language-"] .token.function {
+  color: #61afef;
+}
+code[class*="language-"] .token.class-name,
+pre[class*="language-"] .token.class-name {
+  color: #e5c07b;
+}
+code[class*="language-"] .token.variable,
+pre[class*="language-"] .token.variable {
+  color: #d19a66;
+}
+code[class*="language-"] .token.regex,
+pre[class*="language-"] .token.regex {
+  color: #56b6c2;
+}
+code[class*="language-"] .token.important,
+pre[class*="language-"] .token.important {
+  color: #e06c75;
+}
+code[class*="language-"] .token.important,
+pre[class*="language-"] .token.important,
+code[class*="language-"] .token.bold,
+pre[class*="language-"] .token.bold {
+  font-weight: bold;
+}
+code[class*="language-"] .token.italic,
+pre[class*="language-"] .token.italic {
+  font-style: italic;
+}
+code[class*="language-"] .token.entity,
+pre[class*="language-"] .token.entity {
+  cursor: help;
+}
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: rgba(153, 122, 102, 0.08);
+  background: linear-gradient(to right, rgba(153, 122, 102, 0.1) 70%, rgba(153, 122, 102, 0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+pre[data-line] .line-highlight:before,
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: 0.4em;
+  left: 0.6em;
+  min-width: 1em;
+  padding: 0 0.5em;
+  background-color: rgba(153, 122, 102, 0.4);
+  color: #f5f2f0;
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: 0.3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: 0.4em;
 }
 
       </style>
@@ -563,7 +990,7 @@ pre[data-line] .line-highlight[data-end]:after {
 <em>Textbook: &#x6570;&#x5B66;&#x5206;&#x6790;&#x65B0;&#x8BB2; &#x5F20;&#x7B51;&#x751F;</em></p>
 <h2 class="mume-header" id="25-%E5%87%BD%E6%95%B0%E7%9A%84%E6%9E%81%E9%99%90">2.5 &#x51FD;&#x6570;&#x7684;&#x6781;&#x9650;</h2>
 
-<h4 class="mume-header" id="color011075left-bfdef-right-%E9%82%BB%E5%9F%9F"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="#011075"><mrow><mo fence="true">&#x2223;</mo><mtext>&#xA0;</mtext><mrow><mrow><mi mathvariant="bold">D</mi><mi mathvariant="bold">e</mi><mi mathvariant="bold">f</mi></mrow><mtext>&#xA0;</mtext></mrow><mo fence="true" mathcolor="#011075">&#x2223;</mo></mrow></mstyle></mrow><annotation encoding="application/x-tex">\color{011075}\left|\ \bf{Def}\ \right|</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="minner" style="color:#011075;"><span class="mopen delimcenter" style="color:#011075;top:0em;"><span style="color:#011075;">&#x2223;</span></span><span class="mspace" style="color:#011075;"><span style="color:#011075;">&#xA0;</span></span><span class="mord" style="color:#011075;"><span class="mord" style="color:#011075;"><span class="mord mathbf" style="margin-right:0.10903em;color:#011075;">Def</span></span><span class="mspace" style="color:#011075;"><span style="color:#011075;">&#xA0;</span></span></span><span class="mclose delimcenter" style="color:#011075;top:0em;"><span style="color:#011075;">&#x2223;</span></span></span></span></span></span> &#x90BB;&#x57DF;</h4>
+<h4 class="mume-header" id="colord19a66left-bfdef-right-%E9%82%BB%E5%9F%9F"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="#d19a66"><mrow><mo fence="true">&#x2223;</mo><mtext>&#xA0;</mtext><mrow><mrow><mi mathvariant="bold">D</mi><mi mathvariant="bold">e</mi><mi mathvariant="bold">f</mi></mrow><mtext>&#xA0;</mtext></mrow><mo fence="true" mathcolor="#d19a66">&#x2223;</mo></mrow></mstyle></mrow><annotation encoding="application/x-tex">\color{d19a66}\left|\ \bf{Def}\ \right|</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="minner" style="color:#d19a66;"><span class="mopen delimcenter" style="color:#d19a66;top:0em;"><span style="color:#d19a66;">&#x2223;</span></span><span class="mspace" style="color:#d19a66;"><span style="color:#d19a66;">&#xA0;</span></span><span class="mord" style="color:#d19a66;"><span class="mord" style="color:#d19a66;"><span class="mord mathbf" style="margin-right:0.10903em;color:#d19a66;">Def</span></span><span class="mspace" style="color:#d19a66;"><span style="color:#d19a66;">&#xA0;</span></span></span><span class="mclose delimcenter" style="color:#d19a66;top:0em;"><span style="color:#d19a66;">&#x2223;</span></span></span></span></span></span> &#x90BB;&#x57DF;</h4>
 
 <p>&#x8BBE; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>&#x2208;</mo><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">a \in \mathbb{R}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&#x2208;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6889em;"></span><span class="mord mathbb">R</span></span></span></span>&#xFF0C;<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>&#x3B7;</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\eta &gt; 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7335em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">&#x3B7;</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span></p>
 <ul>
@@ -588,7 +1015,7 @@ pre[data-line] .line-highlight[data-end]:after {
 </ul>
 <p>&#x4E24;&#x79CD;&#x5B9A;&#x4E49;&#x662F;&#x7B49;&#x4EF7;&#x7684;</p>
 </div>
-<h4 class="mume-header" id="color011075left-bfdef-right-i-%E5%87%BD%E6%95%B0%E6%9E%81%E9%99%90%E7%9A%84%E5%BA%8F%E5%88%97%E5%BC%8F%E5%AE%9A%E4%B9%89"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="#011075"><mrow><mo fence="true">&#x2223;</mo><mtext>&#xA0;</mtext><mrow><mrow><mi mathvariant="bold">D</mi><mi mathvariant="bold">e</mi><mi mathvariant="bold">f</mi></mrow><mtext>&#xA0;</mtext></mrow><mo fence="true" mathcolor="#011075">&#x2223;</mo></mrow></mstyle></mrow><annotation encoding="application/x-tex">\color{011075}\left|\ \bf{Def}\ \right|</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="minner" style="color:#011075;"><span class="mopen delimcenter" style="color:#011075;top:0em;"><span style="color:#011075;">&#x2223;</span></span><span class="mspace" style="color:#011075;"><span style="color:#011075;">&#xA0;</span></span><span class="mord" style="color:#011075;"><span class="mord" style="color:#011075;"><span class="mord mathbf" style="margin-right:0.10903em;color:#011075;">Def</span></span><span class="mspace" style="color:#011075;"><span style="color:#011075;">&#xA0;</span></span></span><span class="mclose delimcenter" style="color:#011075;top:0em;"><span style="color:#011075;">&#x2223;</span></span></span></span></span></span> I &#x51FD;&#x6570;&#x6781;&#x9650;&#x7684;&#x5E8F;&#x5217;&#x5F0F;&#x5B9A;&#x4E49;</h4>
+<h4 class="mume-header" id="colord19a66left-bfdef-right-i-%E5%87%BD%E6%95%B0%E6%9E%81%E9%99%90%E7%9A%84%E5%BA%8F%E5%88%97%E5%BC%8F%E5%AE%9A%E4%B9%89"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="#d19a66"><mrow><mo fence="true">&#x2223;</mo><mtext>&#xA0;</mtext><mrow><mrow><mi mathvariant="bold">D</mi><mi mathvariant="bold">e</mi><mi mathvariant="bold">f</mi></mrow><mtext>&#xA0;</mtext></mrow><mo fence="true" mathcolor="#d19a66">&#x2223;</mo></mrow></mstyle></mrow><annotation encoding="application/x-tex">\color{d19a66}\left|\ \bf{Def}\ \right|</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="minner" style="color:#d19a66;"><span class="mopen delimcenter" style="color:#d19a66;top:0em;"><span style="color:#d19a66;">&#x2223;</span></span><span class="mspace" style="color:#d19a66;"><span style="color:#d19a66;">&#xA0;</span></span><span class="mord" style="color:#d19a66;"><span class="mord" style="color:#d19a66;"><span class="mord mathbf" style="margin-right:0.10903em;color:#d19a66;">Def</span></span><span class="mspace" style="color:#d19a66;"><span style="color:#d19a66;">&#xA0;</span></span></span><span class="mclose delimcenter" style="color:#d19a66;top:0em;"><span style="color:#d19a66;">&#x2223;</span></span></span></span></span></span> I &#x51FD;&#x6570;&#x6781;&#x9650;&#x7684;&#x5E8F;&#x5217;&#x5F0F;&#x5B9A;&#x4E49;</h4>
 
 <p>&#x8BBE; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo separator="true">,</mo><mi>a</mi><mo>&#x2208;</mo><mover accent="true"><mi mathvariant="double-struck">R</mi><mo stretchy="true">&#x203E;</mo></mover></mrow><annotation encoding="application/x-tex">A,a \in \mathbb{\overline{R}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">A</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&#x2208;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;"></span><span class="mord overline"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8889em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathbb">R</span></span></span><span style="top:-3.8089em;"><span class="pstrut" style="height:3em;"></span><span class="overline-line" style="border-bottom-width:0.04em;"></span></span></span></span></span></span></span></span></span>&#xFF0C;&#x51FD;&#x6570; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f(x)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span></span></span></span> &#x5728;&#x67D0;&#x4E2A; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover accent="true"><mi>U</mi><mo>&#x2DA;</mo></mover><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathring{U}(a)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.1968em;vertical-align:-0.25em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9468em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">U</span></span><span style="top:-3.2523em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.3472em;"><span class="mord">&#x2DA;</span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mclose">)</span></span></span></span> &#x4E0A;&#x6709;&#x5B9A;&#x4E49;<br>
 &#x5982;&#x679C;&#x5BF9;&#x4E8E;&#x4EFB;&#x4F55;&#x6781;&#x9650;&#x4E3A; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">a</span></span></span></span> &#x7684;&#x5B9E;&#x6570;&#x5E8F;&#x5217; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo fence="true">{</mo><msub><mi>x</mi><mi>n</mi></msub><mo fence="true">}</mo></mrow><mo>&#x2282;</mo><mover accent="true"><mi>U</mi><mo>&#x2DA;</mo></mover><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\left\{ x_n \right\} \subset  \mathring{U}(a)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;">{</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;">}</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&#x2282;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.1968em;vertical-align:-0.25em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9468em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">U</span></span><span style="top:-3.2523em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.3472em;"><span class="mord">&#x2DA;</span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mclose">)</span></span></span></span>&#xFF0C;&#x76F8;&#x5E94;&#x7684;&#x51FD;&#x6570;&#x503C;&#x5E8F;&#x5217; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo fence="true">{</mo><mi>f</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo><mo fence="true">}</mo></mrow><annotation encoding="application/x-tex">\left\{ f(x_n) \right\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;">{</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mclose delimcenter" style="top:0em;">}</span></span></span></span></span> &#x6781;&#x9650;&#x4E3A; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span><br>
@@ -602,8 +1029,8 @@ pre[data-line] .line-highlight[data-end]:after {
 <ul>
 <li><a href="#25-%E5%87%BD%E6%95%B0%E7%9A%84%E6%9E%81%E9%99%90">2.5 &#x51FD;&#x6570;&#x7684;&#x6781;&#x9650;</a>
 <ul>
-<li><a href="#color011075left-bfdef-right-%E9%82%BB%E5%9F%9F"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="#011075"><mrow><mo fence="true">&#x2223;</mo><mtext>&#xA0;</mtext><mrow><mrow><mi mathvariant="bold">D</mi><mi mathvariant="bold">e</mi><mi mathvariant="bold">f</mi></mrow><mtext>&#xA0;</mtext></mrow><mo fence="true" mathcolor="#011075">&#x2223;</mo></mrow></mstyle></mrow><annotation encoding="application/x-tex">\color{011075}\left|\ \bf{Def}\ \right|</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="minner" style="color:#011075;"><span class="mopen delimcenter" style="color:#011075;top:0em;"><span style="color:#011075;">&#x2223;</span></span><span class="mspace" style="color:#011075;"><span style="color:#011075;">&#xA0;</span></span><span class="mord" style="color:#011075;"><span class="mord" style="color:#011075;"><span class="mord mathbf" style="margin-right:0.10903em;color:#011075;">Def</span></span><span class="mspace" style="color:#011075;"><span style="color:#011075;">&#xA0;</span></span></span><span class="mclose delimcenter" style="color:#011075;top:0em;"><span style="color:#011075;">&#x2223;</span></span></span></span></span></span> &#x90BB;&#x57DF;</a></li>
-<li><a href="#color011075left-bfdef-right-i-%E5%87%BD%E6%95%B0%E6%9E%81%E9%99%90%E7%9A%84%E5%BA%8F%E5%88%97%E5%BC%8F%E5%AE%9A%E4%B9%89"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="#011075"><mrow><mo fence="true">&#x2223;</mo><mtext>&#xA0;</mtext><mrow><mrow><mi mathvariant="bold">D</mi><mi mathvariant="bold">e</mi><mi mathvariant="bold">f</mi></mrow><mtext>&#xA0;</mtext></mrow><mo fence="true" mathcolor="#011075">&#x2223;</mo></mrow></mstyle></mrow><annotation encoding="application/x-tex">\color{011075}\left|\ \bf{Def}\ \right|</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="minner" style="color:#011075;"><span class="mopen delimcenter" style="color:#011075;top:0em;"><span style="color:#011075;">&#x2223;</span></span><span class="mspace" style="color:#011075;"><span style="color:#011075;">&#xA0;</span></span><span class="mord" style="color:#011075;"><span class="mord" style="color:#011075;"><span class="mord mathbf" style="margin-right:0.10903em;color:#011075;">Def</span></span><span class="mspace" style="color:#011075;"><span style="color:#011075;">&#xA0;</span></span></span><span class="mclose delimcenter" style="color:#011075;top:0em;"><span style="color:#011075;">&#x2223;</span></span></span></span></span></span> I &#x51FD;&#x6570;&#x6781;&#x9650;&#x7684;&#x5E8F;&#x5217;&#x5F0F;&#x5B9A;&#x4E49;</a></li>
+<li><a href="#colord19a66left-bfdef-right-%E9%82%BB%E5%9F%9F"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="#d19a66"><mrow><mo fence="true">&#x2223;</mo><mtext>&#xA0;</mtext><mrow><mrow><mi mathvariant="bold">D</mi><mi mathvariant="bold">e</mi><mi mathvariant="bold">f</mi></mrow><mtext>&#xA0;</mtext></mrow><mo fence="true" mathcolor="#d19a66">&#x2223;</mo></mrow></mstyle></mrow><annotation encoding="application/x-tex">\color{d19a66}\left|\ \bf{Def}\ \right|</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="minner" style="color:#d19a66;"><span class="mopen delimcenter" style="color:#d19a66;top:0em;"><span style="color:#d19a66;">&#x2223;</span></span><span class="mspace" style="color:#d19a66;"><span style="color:#d19a66;">&#xA0;</span></span><span class="mord" style="color:#d19a66;"><span class="mord" style="color:#d19a66;"><span class="mord mathbf" style="margin-right:0.10903em;color:#d19a66;">Def</span></span><span class="mspace" style="color:#d19a66;"><span style="color:#d19a66;">&#xA0;</span></span></span><span class="mclose delimcenter" style="color:#d19a66;top:0em;"><span style="color:#d19a66;">&#x2223;</span></span></span></span></span></span> &#x90BB;&#x57DF;</a></li>
+<li><a href="#colord19a66left-bfdef-right-i-%E5%87%BD%E6%95%B0%E6%9E%81%E9%99%90%E7%9A%84%E5%BA%8F%E5%88%97%E5%BC%8F%E5%AE%9A%E4%B9%89"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="#d19a66"><mrow><mo fence="true">&#x2223;</mo><mtext>&#xA0;</mtext><mrow><mrow><mi mathvariant="bold">D</mi><mi mathvariant="bold">e</mi><mi mathvariant="bold">f</mi></mrow><mtext>&#xA0;</mtext></mrow><mo fence="true" mathcolor="#d19a66">&#x2223;</mo></mrow></mstyle></mrow><annotation encoding="application/x-tex">\color{d19a66}\left|\ \bf{Def}\ \right|</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="minner" style="color:#d19a66;"><span class="mopen delimcenter" style="color:#d19a66;top:0em;"><span style="color:#d19a66;">&#x2223;</span></span><span class="mspace" style="color:#d19a66;"><span style="color:#d19a66;">&#xA0;</span></span><span class="mord" style="color:#d19a66;"><span class="mord" style="color:#d19a66;"><span class="mord mathbf" style="margin-right:0.10903em;color:#d19a66;">Def</span></span><span class="mspace" style="color:#d19a66;"><span style="color:#d19a66;">&#xA0;</span></span></span><span class="mclose delimcenter" style="color:#d19a66;top:0em;"><span style="color:#d19a66;">&#x2223;</span></span></span></span></span></span> I &#x51FD;&#x6570;&#x6781;&#x9650;&#x7684;&#x5E8F;&#x5217;&#x5F0F;&#x5B9A;&#x4E49;</a></li>
 </ul>
 </li>
 </ul>

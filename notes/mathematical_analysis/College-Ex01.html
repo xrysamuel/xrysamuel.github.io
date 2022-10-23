@@ -254,45 +254,472 @@ pre[data-line] .line-highlight[data-end]:after {
   top: auto;
   bottom: .4em;
 }html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
-.md-sidebar-toc.md-sidebar-toc {
-  font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
-}
-.markdown-preview.markdown-preview {
-  font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
-  color: #333333;
-}
-.markdown-preview.markdown-preview blockquote {
+blockquote {
   padding: 5px 15px !important;
 }
-.markdown-preview.markdown-preview table {
-  display: table;
+.md-sidebar-toc ul li {
+  font-size: 16px;
+}
+.md-sidebar-toc ul ul li {
+  font-size: 14px;
+}
+.md-sidebar-toc ul ul ul li {
+  font-size: 12px;
+}
+.md-sidebar-toc ul ul ul ul li {
+  font-size: 10px;
+}
+html body {
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: hsl(220, 14%, 71%);
+  background-color: hsl(220, 13%, 18%);
+  overflow: initial;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+html body > :first-child {
+  margin-top: 0;
+}
+html body h1,
+html body h2,
+html body h3,
+html body h4,
+html body h5,
+html body h6 {
+  line-height: 1.2;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  color: hsl(0, 0%, 100%);
+}
+html body h1 {
+  font-size: 2.25em;
+  font-weight: 300;
+  padding-bottom: 0.3em;
+}
+html body h2 {
+  font-size: 1.75em;
+  font-weight: 400;
+  padding-bottom: 0.3em;
+}
+html body h3 {
+  font-size: 1.5em;
+  font-weight: 500;
+}
+html body h4 {
+  font-size: 1.25em;
+  font-weight: 600;
+}
+html body h5 {
+  font-size: 1.1em;
+  font-weight: 600;
+}
+html body h6 {
+  font-size: 1em;
+  font-weight: 600;
+}
+html body h1,
+html body h2,
+html body h3,
+html body h4,
+html body h5 {
+  font-weight: 600;
+}
+html body h5 {
+  font-size: 1em;
+}
+html body h6 {
+  color: hsl(220, 14%, 55%);
+}
+html body strong {
+  color: hsl(0, 0%, 100%);
+}
+html body del {
+  color: hsl(220, 14%, 55%);
+}
+html body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+html body a {
+  color: #56b6c2;
+  text-decoration: none;
+}
+html body a:hover {
+  color: #74c3cd;
+  text-decoration: none;
+}
+html body img {
+  max-width: 100%;
+}
+html body > p {
+  margin-top: 0;
+  margin-bottom: 16px;
+  word-wrap: break-word;
+}
+html body > ul,
+html body > ol {
+  margin-bottom: 16px;
+}
+html body ul,
+html body ol {
+  padding-left: 2em;
+}
+html body ul.no-list,
+html body ol.no-list {
+  padding: 0;
+  list-style-type: none;
+}
+html body ul ul,
+html body ul ol,
+html body ol ol,
+html body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+html body li {
+  margin-bottom: 0;
+}
+html body li.task-list-item {
+  list-style: none;
+}
+html body li > p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+html body .task-list-item-checkbox {
+  margin: 0 0.2em 0.25em -1.8em;
+  vertical-align: middle;
+}
+html body .task-list-item-checkbox:hover {
+  cursor: pointer;
+}
+html body blockquote {
+  margin: 16px 0;
+  font-size: inherit;
+  padding: 0 15px;
+  color: hsl(220, 14%, 55%);
+  background-color: hsl(220, 13%, 26%);
+  border-left: 4px solid hsl(220, 13%, 34%);
+}
+html body blockquote > :first-child {
+  margin-top: 0;
+}
+html body blockquote > :last-child {
+  margin-bottom: 0;
+}
+html body hr {
+  height: 4px;
+  margin: 32px 0;
+  background-color: hsl(220, 13%, 34%);
+  border: 0 none;
+}
+html body table {
+  margin: 10px 0 15px 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  display: block;
   width: 100%;
-  max-width: 1024px;
-  border: none;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
 }
-.markdown-preview.markdown-preview table th,
-.markdown-preview.markdown-preview table td {
-  height: 36px;
-  border: none;
-  padding: 0 10px;
-}
-.markdown-preview.markdown-preview table th {
+html body table th {
   font-weight: bold;
-  /* text-transform: uppercase;*/
-  text-align: center !important;
-  background: #cbdeff;
+  color: hsl(0, 0%, 100%);
 }
-.markdown-preview.markdown-preview table tbody tr:nth-child(2n) {
-  background: #e3eeff;
+html body table td,
+html body table th {
+  border: 1px solid hsl(220, 13%, 34%);
+  padding: 6px 13px;
 }
-.markdown-preview.markdown-preview table tbody tr:nth-child(2n+1) {
-  background: #ecf3ff;
+html body dl {
+  padding: 0;
 }
-.markdown-preview.markdown-preview table th {
-  white-space: nowrap;
+html body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
 }
-.markdown-preview.markdown-preview table td:nth-child(1) {
-  white-space: nowrap;
+html body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+html body code {
+  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-size: 0.85em !important;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(220, 13%, 26%);
+  border-radius: 3px;
+  padding: 0.2em 0;
+}
+html body code::before,
+html body code::after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+html body pre > code {
+  padding: 0;
+  margin: 0;
+  font-size: 0.85em !important;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+html body .highlight {
+  margin-bottom: 16px;
+}
+html body .highlight pre,
+html body pre {
+  padding: 1em;
+  overflow: auto;
+  font-size: 0.85em !important;
+  line-height: 1.45;
+  border: hsl(220, 13%, 34%);
+  border-radius: 3px;
+}
+html body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+html body pre code,
+html body pre tt {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+html body pre code:before,
+html body pre tt:before,
+html body pre code:after,
+html body pre tt:after {
+  content: normal;
+}
+html body p,
+html body blockquote,
+html body ul,
+html body ol,
+html body dl,
+html body pre {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+html body kbd {
+  color: hsl(0, 0%, 100%);
+  border: 1px solid hsl(220, 13%, 34%);
+  border-bottom: 2px solid hsl(220, 13%, 28%);
+  padding: 2px 4px;
+  background-color: hsl(220, 13%, 26%);
+  border-radius: 3px;
+}
+@media print {
+  html body {
+    background-color: hsl(220, 13%, 18%);
+  }
+  html body h1,
+  html body h2,
+  html body h3,
+  html body h4,
+  html body h5,
+  html body h6 {
+    color: hsl(0, 0%, 100%);
+    page-break-after: avoid;
+  }
+  html body blockquote {
+    color: hsl(220, 14%, 55%);
+  }
+  html body pre {
+    page-break-inside: avoid;
+  }
+  html body table {
+    display: table;
+  }
+  html body img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  html body pre,
+  html body code {
+    word-wrap: break-word;
+    white-space: pre;
+  }
+}
+pre {
+  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+  line-height: 1.5;
+  tab-size: 4;
+  hyphens: none;
+  color: #abb2bf !important;
+  background-color: #31363f !important;
+  border: #4b5362;
+  border-radius: 3px;
+}
+pre[class*="language-"] {
+  padding: 1em;
+}
+code[class*="language-"] .token.comment,
+pre[class*="language-"] .token.comment,
+code[class*="language-"] .token.prolog,
+pre[class*="language-"] .token.prolog,
+code[class*="language-"] .token.doctype,
+pre[class*="language-"] .token.doctype,
+code[class*="language-"] .token.cdata,
+pre[class*="language-"] .token.cdata {
+  color: #5c6370;
+}
+code[class*="language-"] .namespace,
+pre[class*="language-"] .namespace {
+  opacity: 0.7;
+}
+code[class*="language-"] .token.constant,
+pre[class*="language-"] .token.constant {
+  color: #d19a66;
+}
+code[class*="language-"] .token.boolean,
+pre[class*="language-"] .token.boolean,
+code[class*="language-"] .token.number,
+pre[class*="language-"] .token.number,
+code[class*="language-"] .token.function-name,
+pre[class*="language-"] .token.function-name {
+  color: #d19a66;
+}
+code[class*="language-"] .token.tag,
+pre[class*="language-"] .token.tag {
+  color: #e06c75;
+}
+code[class*="language-"] .token.symbol,
+pre[class*="language-"] .token.symbol {
+  color: #56b6c2;
+}
+code[class*="language-"] .token.selector,
+pre[class*="language-"] .token.selector {
+  color: #c678dd;
+}
+code[class*="language-"] .token.attr-name,
+pre[class*="language-"] .token.attr-name {
+  color: #d19a66;
+}
+code[class*="language-"] .token.string,
+pre[class*="language-"] .token.string {
+  color: #98c379;
+}
+code[class*="language-"] .token.char,
+pre[class*="language-"] .token.char {
+  color: #56b6c2;
+}
+code[class*="language-"] .token.url,
+pre[class*="language-"] .token.url {
+  color: #56b6c2;
+}
+code[class*="language-"] .token.operator,
+pre[class*="language-"] .token.operator {
+  color: #abb2bf;
+}
+code[class*="language-"] .token.atrule,
+pre[class*="language-"] .token.atrule,
+code[class*="language-"] .token.attr-value,
+pre[class*="language-"] .token.attr-value,
+code[class*="language-"] .token.keyword,
+pre[class*="language-"] .token.keyword {
+  color: #c678dd;
+}
+code[class*="language-"] .token.function,
+pre[class*="language-"] .token.function {
+  color: #61afef;
+}
+code[class*="language-"] .token.class-name,
+pre[class*="language-"] .token.class-name {
+  color: #e5c07b;
+}
+code[class*="language-"] .token.variable,
+pre[class*="language-"] .token.variable {
+  color: #d19a66;
+}
+code[class*="language-"] .token.regex,
+pre[class*="language-"] .token.regex {
+  color: #56b6c2;
+}
+code[class*="language-"] .token.important,
+pre[class*="language-"] .token.important {
+  color: #e06c75;
+}
+code[class*="language-"] .token.important,
+pre[class*="language-"] .token.important,
+code[class*="language-"] .token.bold,
+pre[class*="language-"] .token.bold {
+  font-weight: bold;
+}
+code[class*="language-"] .token.italic,
+pre[class*="language-"] .token.italic {
+  font-style: italic;
+}
+code[class*="language-"] .token.entity,
+pre[class*="language-"] .token.entity {
+  cursor: help;
+}
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: rgba(153, 122, 102, 0.08);
+  background: linear-gradient(to right, rgba(153, 122, 102, 0.1) 70%, rgba(153, 122, 102, 0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+pre[data-line] .line-highlight:before,
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: 0.4em;
+  left: 0.6em;
+  min-width: 1em;
+  padding: 0 0.5em;
+  background-color: rgba(153, 122, 102, 0.4);
+  color: #f5f2f0;
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: 0.3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: 0.4em;
 }
 
       </style>
@@ -304,7 +731,7 @@ pre[data-line] .line-highlight[data-end]:after {
 <p><em>Time: 2022/10/11</em><br>
 <em>Author: XrySamuel</em><br>
 <em>Textbook: &#x5927;&#x5B66;&#x6570;&#x5B66;&#x2014;&#x2014;&#x6570;&#x5B66;&#x5206;&#x6790; &#x4EA4;&#x901A;&#x5927;&#x5B66;&#x6570;&#x5B66;&#x7CFB;</em></p>
-<h4 class="mume-header" id="colorb70203left-bfex-right"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="#b70203"><mrow><mo fence="true">&#x2223;</mo><mtext>&#xA0;</mtext><mrow><mrow><mi mathvariant="bold">E</mi><mi mathvariant="bold">x</mi></mrow><mtext>&#xA0;</mtext></mrow><mo fence="true" mathcolor="#b70203">&#x2223;</mo></mrow></mstyle></mrow><annotation encoding="application/x-tex">\color{b70203}\left|\ \bf{Ex}\ \right|</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="minner" style="color:#b70203;"><span class="mopen delimcenter" style="color:#b70203;top:0em;"><span style="color:#b70203;">&#x2223;</span></span><span class="mspace" style="color:#b70203;"><span style="color:#b70203;">&#xA0;</span></span><span class="mord" style="color:#b70203;"><span class="mord" style="color:#b70203;"><span class="mord mathbf" style="color:#b70203;">Ex</span></span><span class="mspace" style="color:#b70203;"><span style="color:#b70203;">&#xA0;</span></span></span><span class="mclose delimcenter" style="color:#b70203;top:0em;"><span style="color:#b70203;">&#x2223;</span></span></span></span></span></span></h4>
+<h4 class="mume-header" id="color98c379left-bfex-right"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="#98c379"><mrow><mo fence="true">&#x2223;</mo><mtext>&#xA0;</mtext><mrow><mrow><mi mathvariant="bold">E</mi><mi mathvariant="bold">x</mi></mrow><mtext>&#xA0;</mtext></mrow><mo fence="true" mathcolor="#98c379">&#x2223;</mo></mrow></mstyle></mrow><annotation encoding="application/x-tex">\color{98c379}\left|\ \bf{Ex}\ \right|</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="minner" style="color:#98c379;"><span class="mopen delimcenter" style="color:#98c379;top:0em;"><span style="color:#98c379;">&#x2223;</span></span><span class="mspace" style="color:#98c379;"><span style="color:#98c379;">&#xA0;</span></span><span class="mord" style="color:#98c379;"><span class="mord" style="color:#98c379;"><span class="mord mathbf" style="color:#98c379;">Ex</span></span><span class="mspace" style="color:#98c379;"><span style="color:#98c379;">&#xA0;</span></span></span><span class="mclose delimcenter" style="color:#98c379;top:0em;"><span style="color:#98c379;">&#x2223;</span></span></span></span></span></span></h4>
 
 <p>&#x8BC1;&#x660E;&#xFF1A;<br>
 <span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mfrac><mn>1</mn><mrow><mn>2</mn><msqrt><mi>n</mi></msqrt></mrow></mfrac><mo>&#x2A7D;</mo><mfrac><mrow><mo stretchy="false">(</mo><mn>2</mn><mi>n</mi><mo>&#x2212;</mo><mn>1</mn><mo stretchy="false">)</mo><mo stretchy="false">!</mo><mo stretchy="false">!</mo></mrow><mrow><mo stretchy="false">(</mo><mn>2</mn><mi>n</mi><mo stretchy="false">)</mo><mo stretchy="false">!</mo><mo stretchy="false">!</mo></mrow></mfrac><mo>&lt;</mo><mfrac><mn>1</mn><msqrt><mrow><mn>2</mn><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msqrt></mfrac></mrow><annotation encoding="application/x-tex">\frac{1}{2\sqrt{n}} \leqslant \frac{(2n-1)!!}{(2n)!!} &lt; \frac{1}{\sqrt{2n + 1}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.2514em;vertical-align:-0.93em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.3097em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8003em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord mathnormal">n</span></span></span><span style="top:-2.7603em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg xmlns="http://www.w3.org/2000/svg" width="400em" height="1.08em" viewBox="0 0 400000 1080" preserveAspectRatio="xMinYMin slice"><path d="M95,702
@@ -333,14 +760,14 @@ M834 80h400000v40h-400000z"/></svg></span></span></span><span class="vlist-s">&#
 <blockquote>
 <p>&#x8BC1;&#x660E;&#x601D;&#x8DEF;&#xFF1A;&#x6570;&#x5B66;&#x5F52;&#x7EB3;&#x6CD5;&#xFF0C;Bernoulli&#x4E0D;&#x7B49;&#x5F0F;&#xFF0C;&#x5747;&#x503C;&#x4E0D;&#x7B49;&#x5F0F;</p>
 </blockquote>
-<h4 class="mume-header" id="colorb70203left-bfex-right-1"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="#b70203"><mrow><mo fence="true">&#x2223;</mo><mtext>&#xA0;</mtext><mrow><mrow><mi mathvariant="bold">E</mi><mi mathvariant="bold">x</mi></mrow><mtext>&#xA0;</mtext></mrow><mo fence="true" mathcolor="#b70203">&#x2223;</mo></mrow></mstyle></mrow><annotation encoding="application/x-tex">\color{b70203}\left|\ \bf{Ex}\ \right|</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="minner" style="color:#b70203;"><span class="mopen delimcenter" style="color:#b70203;top:0em;"><span style="color:#b70203;">&#x2223;</span></span><span class="mspace" style="color:#b70203;"><span style="color:#b70203;">&#xA0;</span></span><span class="mord" style="color:#b70203;"><span class="mord" style="color:#b70203;"><span class="mord mathbf" style="color:#b70203;">Ex</span></span><span class="mspace" style="color:#b70203;"><span style="color:#b70203;">&#xA0;</span></span></span><span class="mclose delimcenter" style="color:#b70203;top:0em;"><span style="color:#b70203;">&#x2223;</span></span></span></span></span></span></h4>
+<h4 class="mume-header" id="color98c379left-bfex-right-1"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="#98c379"><mrow><mo fence="true">&#x2223;</mo><mtext>&#xA0;</mtext><mrow><mrow><mi mathvariant="bold">E</mi><mi mathvariant="bold">x</mi></mrow><mtext>&#xA0;</mtext></mrow><mo fence="true" mathcolor="#98c379">&#x2223;</mo></mrow></mstyle></mrow><annotation encoding="application/x-tex">\color{98c379}\left|\ \bf{Ex}\ \right|</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="minner" style="color:#98c379;"><span class="mopen delimcenter" style="color:#98c379;top:0em;"><span style="color:#98c379;">&#x2223;</span></span><span class="mspace" style="color:#98c379;"><span style="color:#98c379;">&#xA0;</span></span><span class="mord" style="color:#98c379;"><span class="mord" style="color:#98c379;"><span class="mord mathbf" style="color:#98c379;">Ex</span></span><span class="mspace" style="color:#98c379;"><span style="color:#98c379;">&#xA0;</span></span></span><span class="mclose delimcenter" style="color:#98c379;top:0em;"><span style="color:#98c379;">&#x2223;</span></span></span></span></span></span></h4>
 
 <p>&#x5224;&#x65AD;&#x6B63;&#x8BEF;&#xFF1A;</p>
 <p>&#x8BBE;&#x6570;&#x5217; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">{x_{n}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span>&#xFF0C;&#x82E5;&#x6709;&#x65E0;&#x7A77;&#x591A;&#x4E2A;&#x5B50;&#x5217; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">{</mo><msub><mi>x</mi><msubsup><mi>n</mi><mi>k</mi><mrow><mo stretchy="false">(</mo><mi>l</mi><mo stretchy="false">)</mo></mrow></msubsup></msub><mo stretchy="false">}</mo><mo separator="true">,</mo><mi>l</mi><mo>=</mo><mn>1</mn><mo separator="true">,</mo><mn>2</mn><mo separator="true">,</mo><mn>3</mn><mo separator="true">,</mo><mo>&#x22EF;</mo></mrow><annotation encoding="application/x-tex">\{x_{n_{k}^{(l)}}\}, l=1,2,3,\cdots</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.3896em;vertical-align:-0.6396em;"></span><span class="mopen">{</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.3448em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7414em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.0591em;"><span style="top:-2.1885em;margin-left:0em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5357em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span style="top:-3.0591em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5357em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathnormal mtight" style="margin-right:0.01968em;">l</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.3472em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.6396em;"><span></span></span></span></span></span></span><span class="mclose">}</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8389em;vertical-align:-0.1944em;"></span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">2</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">3</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner">&#x22EF;</span></span></span></span> &#x6536;&#x655B;&#xFF0C;&#x5E76;&#x4E14;&#x6536;&#x655B;&#x4E8E;&#x76F8;&#x540C;&#x7684;&#x6781;&#x9650;&#xFF0C;&#x5176;&#x4E2D; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">{</mo><msub><mi>x</mi><msubsup><mi>n</mi><mi>k</mi><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></msubsup></msub><mo stretchy="false">}</mo><mo>&#x2229;</mo><mo stretchy="false">{</mo><msub><mi>x</mi><msubsup><mi>n</mi><mi>k</mi><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></msubsup></msub><mo stretchy="false">}</mo><mo>=</mo><mi mathvariant="normal">&#x2205;</mi><mo stretchy="false">(</mo><mi>s</mi><mo separator="true">,</mo><mi>t</mi><mo>=</mo><mn>1</mn><mo separator="true">,</mo><mn>2</mn><mo separator="true">,</mo><mn>3</mn><mo separator="true">,</mo><mo>&#x22EF;</mo><mtext>&#x2009;</mtext><mo separator="true">,</mo><mi>s</mi><mo mathvariant="normal">&#x2260;</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\{x_{n_{k}^{(s)}}\} \cap \{x_{n_{k}^{(t)}}\} = \varnothing (s,t=1,2,3,\cdots ,s \neq t)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.3896em;vertical-align:-0.6396em;"></span><span class="mopen">{</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.3448em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7414em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.0591em;"><span style="top:-2.1885em;margin-left:0em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5357em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span style="top:-3.0591em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5357em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathnormal mtight">s</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.3472em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.6396em;"><span></span></span></span></span></span></span><span class="mclose">}</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">&#x2229;</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.3896em;vertical-align:-0.6396em;"></span><span class="mopen">{</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.3448em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7414em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.0591em;"><span style="top:-2.1885em;margin-left:0em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5357em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span style="top:-3.0591em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5357em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathnormal mtight">t</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.3472em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.6396em;"><span></span></span></span></span></span></span><span class="mclose">}</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord amsrm">&#x2205;</span><span class="mopen">(</span><span class="mord mathnormal">s</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">2</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">3</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner">&#x22EF;</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">s</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel"><span class="mrel"><span class="mord vbox"><span class="thinbox"><span class="rlap"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="inner"><span class="mord"><span class="mrel">&#xE020;</span></span></span><span class="fix"></span></span></span></span></span><span class="mrel">=</span></span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">t</span><span class="mclose">)</span></span></span></span> &#x4E14; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mo>&#x22C3;</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">&#x221E;</mi></msubsup><mo stretchy="false">{</mo><msub><mi>x</mi><msubsup><mi>n</mi><mi>k</mi><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></msubsup></msub><mo stretchy="false">}</mo><mo>=</mo><msup><mi mathvariant="double-struck">N</mi><mo>+</mo></msup></mrow><annotation encoding="application/x-tex">\bigcup_{i=1}^{ \infty}\{x_{n_{k}^{(i)}}\} = \mathbb{N}^+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.4439em;vertical-align:-0.6396em;"></span><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:0em;">&#x22C3;</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8043em;"><span style="top:-2.4003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.2029em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">&#x221E;</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.2997em;"><span></span></span></span></span></span></span><span class="mopen">{</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.3448em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7414em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.0591em;"><span style="top:-2.1885em;margin-left:0em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5357em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span style="top:-3.0591em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5357em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathnormal mtight">i</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.3472em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.6396em;"><span></span></span></span></span></span></span><span class="mclose">}</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7713em;"></span><span class="mord"><span class="mord mathbb">N</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7713em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">+</span></span></span></span></span></span></span></span></span></span></span>&#xFF0C;&#x5219;&#x6570;&#x5217;&#x4E00;&#x5B9A;&#x6536;&#x655B;</p>
 <blockquote>
 <p>&#x8BC1;&#x660E;&#x601D;&#x8DEF;&#xFF1A;&#x6784;&#x9020;&#x53CD;&#x4F8B; <span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>x</mi><mi>n</mi></msub><mo>=</mo><mrow><mo fence="true">{</mo><mtable rowspacing="0.25em" columnalign="right" columnspacing><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mn>1</mn><mo separator="true">,</mo><mspace width="1em"></mspace><mi>n</mi><mo>=</mo><msup><mn>2</mn><mrow><mi>k</mi><mo>&#x2212;</mo><mn>1</mn></mrow></msup></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mn>0</mn><mo separator="true">,</mo><mspace width="1em"></mspace><mi>n</mi><mo mathvariant="normal">&#x2260;</mo><msup><mn>2</mn><mrow><mi>k</mi><mo>&#x2212;</mo><mn>1</mn></mrow></msup></mrow></mstyle></mtd></mtr></mtable></mrow></mrow><annotation encoding="application/x-tex">x_{n} = \left\{\begin{align}1,\quad n=2^{k-1} \nonumber \\ 0,\quad n \neq 2^{k-1} \nonumber \end{align}\right.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:3.1182em;vertical-align:-1.3091em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size4">{</span></span><span class="mord"><span class="mtable"><span class="col-align-r"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.8091em;"><span style="top:-3.91em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8991em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span><span class="mbin mtight">&#x2212;</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span></span></span><span style="top:-2.3509em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel"><span class="mrel"><span class="mord vbox"><span class="thinbox"><span class="rlap"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="inner"><span class="mord"><span class="mrel">&#xE020;</span></span></span><span class="fix"></span></span></span></span></span><span class="mrel">=</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8991em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span><span class="mbin mtight">&#x2212;</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:1.3091em;"><span></span></span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span> <span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msubsup><mi>n</mi><mi>k</mi><mrow><mo stretchy="false">(</mo><mi>l</mi><mo stretchy="false">)</mo></mrow></msubsup><mo>=</mo><msup><mn>2</mn><mrow><mi>l</mi><mo>&#x2212;</mo><mn>1</mn></mrow></msup><mo stretchy="false">(</mo><mn>2</mn><mi>k</mi><mo>&#x2212;</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">n_{k}^{(l)} = 2^{l-1}(2k-1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.3461em;vertical-align:-0.3013em;"></span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.0448em;"><span style="top:-2.3987em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span style="top:-3.2198em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathnormal mtight" style="margin-right:0.01968em;">l</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.3013em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.1491em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8991em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.01968em;">l</span><span class="mbin mtight">&#x2212;</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord">2</span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">&#x2212;</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">)</span></span></span></span></span></p>
 </blockquote>
-<h4 class="mume-header" id="colorb70203left-bfex-right-2"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="#b70203"><mrow><mo fence="true">&#x2223;</mo><mtext>&#xA0;</mtext><mrow><mrow><mi mathvariant="bold">E</mi><mi mathvariant="bold">x</mi></mrow><mtext>&#xA0;</mtext></mrow><mo fence="true" mathcolor="#b70203">&#x2223;</mo></mrow></mstyle></mrow><annotation encoding="application/x-tex">\color{b70203}\left|\ \bf{Ex}\ \right|</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="minner" style="color:#b70203;"><span class="mopen delimcenter" style="color:#b70203;top:0em;"><span style="color:#b70203;">&#x2223;</span></span><span class="mspace" style="color:#b70203;"><span style="color:#b70203;">&#xA0;</span></span><span class="mord" style="color:#b70203;"><span class="mord" style="color:#b70203;"><span class="mord mathbf" style="color:#b70203;">Ex</span></span><span class="mspace" style="color:#b70203;"><span style="color:#b70203;">&#xA0;</span></span></span><span class="mclose delimcenter" style="color:#b70203;top:0em;"><span style="color:#b70203;">&#x2223;</span></span></span></span></span></span></h4>
+<h4 class="mume-header" id="color98c379left-bfex-right-2"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="#98c379"><mrow><mo fence="true">&#x2223;</mo><mtext>&#xA0;</mtext><mrow><mrow><mi mathvariant="bold">E</mi><mi mathvariant="bold">x</mi></mrow><mtext>&#xA0;</mtext></mrow><mo fence="true" mathcolor="#98c379">&#x2223;</mo></mrow></mstyle></mrow><annotation encoding="application/x-tex">\color{98c379}\left|\ \bf{Ex}\ \right|</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="minner" style="color:#98c379;"><span class="mopen delimcenter" style="color:#98c379;top:0em;"><span style="color:#98c379;">&#x2223;</span></span><span class="mspace" style="color:#98c379;"><span style="color:#98c379;">&#xA0;</span></span><span class="mord" style="color:#98c379;"><span class="mord" style="color:#98c379;"><span class="mord mathbf" style="color:#98c379;">Ex</span></span><span class="mspace" style="color:#98c379;"><span style="color:#98c379;">&#xA0;</span></span></span><span class="mclose delimcenter" style="color:#98c379;top:0em;"><span style="color:#98c379;">&#x2223;</span></span></span></span></span></span></h4>
 
 <p>&#x8BBE;&#x6709;&#x754C;&#x5E8F;&#x5217; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">{</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\{x_{n}\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">}</span></span></span></span>&#xFF0C;&#x82E5;&#x5B58;&#x5728;&#x5B50;&#x5217; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">{</mo><msub><mi>x</mi><msub><mi>n</mi><mi>k</mi></msub></msub><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\{x_{n_{k}}\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0059em;vertical-align:-0.2559em;"></span><span class="mopen">{</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.3488em;margin-left:0em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.1512em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.2559em;"><span></span></span></span></span></span></span><span class="mclose">}</span></span></span></span> &#x6536;&#x655B;&#x4E8E; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">a</span></span></span></span>&#xFF0C;&#x5219;&#x79F0; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">a</span></span></span></span> &#x4E3A;&#x6570;&#x5217; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">{</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\{x_{n}\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">}</span></span></span></span> &#x7684;&#x4E00;&#x4E2A;&#x6781;&#x9650;&#x70B9;&#xFF0C;&#x8BB0; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi></mrow><annotation encoding="application/x-tex">E</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span></span></span></span> &#x4E3A; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">{</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\{x_{n}\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">}</span></span></span></span> &#x6240;&#x6709;&#x6781;&#x9650;&#x70B9;&#x96C6;&#x5408;&#xFF0C;&#x8BC1;&#x660E;&#xFF1A;&#x82E5; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi></mrow><annotation encoding="application/x-tex">E</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span></span></span></span> &#x5177;&#x6709;&#x6700;&#x5927;&#x6570; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi></mrow><annotation encoding="application/x-tex">L</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">L</span></span></span></span> &#x548C;&#x6700;&#x5C0F;&#x6570; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>l</mi></mrow><annotation encoding="application/x-tex">l</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span></span></span></span>&#xFF0C;&#x4E14; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>lim</mi><mo>&#x2061;</mo><mo stretchy="false">(</mo><msub><mi>x</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>&#x2212;</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\lim (x_{n+1}-x_{n}) = 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop">lim</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mbin mtight">+</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.2083em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">&#x2212;</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>&#xFF0C;&#x5219;&#x5BF9;&#x4E8E;&#x4EFB;&#x610F; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo stretchy="false">(</mo><mi>l</mi><mo>&#x2A7D;</mo><mi>a</mi><mo>&#x2A7D;</mo><mi>L</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">a(l \leqslant a \leqslant L)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">a</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel amsrm">&#x2A7D;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7733em;vertical-align:-0.1367em;"></span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel amsrm">&#x2A7D;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">L</span><span class="mclose">)</span></span></span></span>&#xFF0C;&#x5FC5;&#x6709; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>&#x2208;</mo><mi>E</mi></mrow><annotation encoding="application/x-tex">a \in E</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&#x2208;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span></span></span></span></p>
 <blockquote>
@@ -351,9 +778,9 @@ M834 80h400000v40h-400000z"/></svg></span></span></span><span class="vlist-s">&#
       </div>
       <div class="md-sidebar-toc"><ul>
 <li><a href="#%E4%B9%A0%E9%A2%98%E9%9B%86">&#x4E60;&#x9898;&#x96C6;</a><br>
-- <a href="#colorb70203left-bfex-right"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="#b70203"><mrow><mo fence="true">&#x2223;</mo><mtext>&#xA0;</mtext><mrow><mrow><mi mathvariant="bold">E</mi><mi mathvariant="bold">x</mi></mrow><mtext>&#xA0;</mtext></mrow><mo fence="true" mathcolor="#b70203">&#x2223;</mo></mrow></mstyle></mrow><annotation encoding="application/x-tex">\color{b70203}\left|\ \bf{Ex}\ \right|</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="minner" style="color:#b70203;"><span class="mopen delimcenter" style="color:#b70203;top:0em;"><span style="color:#b70203;">&#x2223;</span></span><span class="mspace" style="color:#b70203;"><span style="color:#b70203;">&#xA0;</span></span><span class="mord" style="color:#b70203;"><span class="mord" style="color:#b70203;"><span class="mord mathbf" style="color:#b70203;">Ex</span></span><span class="mspace" style="color:#b70203;"><span style="color:#b70203;">&#xA0;</span></span></span><span class="mclose delimcenter" style="color:#b70203;top:0em;"><span style="color:#b70203;">&#x2223;</span></span></span></span></span></span></a><br>
-- <a href="#colorb70203left-bfex-right-1"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="#b70203"><mrow><mo fence="true">&#x2223;</mo><mtext>&#xA0;</mtext><mrow><mrow><mi mathvariant="bold">E</mi><mi mathvariant="bold">x</mi></mrow><mtext>&#xA0;</mtext></mrow><mo fence="true" mathcolor="#b70203">&#x2223;</mo></mrow></mstyle></mrow><annotation encoding="application/x-tex">\color{b70203}\left|\ \bf{Ex}\ \right|</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="minner" style="color:#b70203;"><span class="mopen delimcenter" style="color:#b70203;top:0em;"><span style="color:#b70203;">&#x2223;</span></span><span class="mspace" style="color:#b70203;"><span style="color:#b70203;">&#xA0;</span></span><span class="mord" style="color:#b70203;"><span class="mord" style="color:#b70203;"><span class="mord mathbf" style="color:#b70203;">Ex</span></span><span class="mspace" style="color:#b70203;"><span style="color:#b70203;">&#xA0;</span></span></span><span class="mclose delimcenter" style="color:#b70203;top:0em;"><span style="color:#b70203;">&#x2223;</span></span></span></span></span></span></a><br>
-- <a href="#colorb70203left-bfex-right-2"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="#b70203"><mrow><mo fence="true">&#x2223;</mo><mtext>&#xA0;</mtext><mrow><mrow><mi mathvariant="bold">E</mi><mi mathvariant="bold">x</mi></mrow><mtext>&#xA0;</mtext></mrow><mo fence="true" mathcolor="#b70203">&#x2223;</mo></mrow></mstyle></mrow><annotation encoding="application/x-tex">\color{b70203}\left|\ \bf{Ex}\ \right|</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="minner" style="color:#b70203;"><span class="mopen delimcenter" style="color:#b70203;top:0em;"><span style="color:#b70203;">&#x2223;</span></span><span class="mspace" style="color:#b70203;"><span style="color:#b70203;">&#xA0;</span></span><span class="mord" style="color:#b70203;"><span class="mord" style="color:#b70203;"><span class="mord mathbf" style="color:#b70203;">Ex</span></span><span class="mspace" style="color:#b70203;"><span style="color:#b70203;">&#xA0;</span></span></span><span class="mclose delimcenter" style="color:#b70203;top:0em;"><span style="color:#b70203;">&#x2223;</span></span></span></span></span></span></a></li>
+- <a href="#color98c379left-bfex-right"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="#98c379"><mrow><mo fence="true">&#x2223;</mo><mtext>&#xA0;</mtext><mrow><mrow><mi mathvariant="bold">E</mi><mi mathvariant="bold">x</mi></mrow><mtext>&#xA0;</mtext></mrow><mo fence="true" mathcolor="#98c379">&#x2223;</mo></mrow></mstyle></mrow><annotation encoding="application/x-tex">\color{98c379}\left|\ \bf{Ex}\ \right|</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="minner" style="color:#98c379;"><span class="mopen delimcenter" style="color:#98c379;top:0em;"><span style="color:#98c379;">&#x2223;</span></span><span class="mspace" style="color:#98c379;"><span style="color:#98c379;">&#xA0;</span></span><span class="mord" style="color:#98c379;"><span class="mord" style="color:#98c379;"><span class="mord mathbf" style="color:#98c379;">Ex</span></span><span class="mspace" style="color:#98c379;"><span style="color:#98c379;">&#xA0;</span></span></span><span class="mclose delimcenter" style="color:#98c379;top:0em;"><span style="color:#98c379;">&#x2223;</span></span></span></span></span></span></a><br>
+- <a href="#color98c379left-bfex-right-1"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="#98c379"><mrow><mo fence="true">&#x2223;</mo><mtext>&#xA0;</mtext><mrow><mrow><mi mathvariant="bold">E</mi><mi mathvariant="bold">x</mi></mrow><mtext>&#xA0;</mtext></mrow><mo fence="true" mathcolor="#98c379">&#x2223;</mo></mrow></mstyle></mrow><annotation encoding="application/x-tex">\color{98c379}\left|\ \bf{Ex}\ \right|</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="minner" style="color:#98c379;"><span class="mopen delimcenter" style="color:#98c379;top:0em;"><span style="color:#98c379;">&#x2223;</span></span><span class="mspace" style="color:#98c379;"><span style="color:#98c379;">&#xA0;</span></span><span class="mord" style="color:#98c379;"><span class="mord" style="color:#98c379;"><span class="mord mathbf" style="color:#98c379;">Ex</span></span><span class="mspace" style="color:#98c379;"><span style="color:#98c379;">&#xA0;</span></span></span><span class="mclose delimcenter" style="color:#98c379;top:0em;"><span style="color:#98c379;">&#x2223;</span></span></span></span></span></span></a><br>
+- <a href="#color98c379left-bfex-right-2"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="#98c379"><mrow><mo fence="true">&#x2223;</mo><mtext>&#xA0;</mtext><mrow><mrow><mi mathvariant="bold">E</mi><mi mathvariant="bold">x</mi></mrow><mtext>&#xA0;</mtext></mrow><mo fence="true" mathcolor="#98c379">&#x2223;</mo></mrow></mstyle></mrow><annotation encoding="application/x-tex">\color{98c379}\left|\ \bf{Ex}\ \right|</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="minner" style="color:#98c379;"><span class="mopen delimcenter" style="color:#98c379;top:0em;"><span style="color:#98c379;">&#x2223;</span></span><span class="mspace" style="color:#98c379;"><span style="color:#98c379;">&#xA0;</span></span><span class="mord" style="color:#98c379;"><span class="mord" style="color:#98c379;"><span class="mord mathbf" style="color:#98c379;">Ex</span></span><span class="mspace" style="color:#98c379;"><span style="color:#98c379;">&#xA0;</span></span></span><span class="mclose delimcenter" style="color:#98c379;top:0em;"><span style="color:#98c379;">&#x2223;</span></span></span></span></span></span></a></li>
 </ul>
 </div>
       <a id="sidebar-toc-btn">&#x2261;</a>
