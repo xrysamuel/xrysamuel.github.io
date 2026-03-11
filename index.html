@@ -13,6 +13,7 @@
         :root {
             --bg-color: #ffffff;
             --text-main: #1a1a1a;
+            --text-about: #444;
             --text-muted: #888888;
             --accent: #000000;
             --line: #f0f0f0;
@@ -29,6 +30,7 @@
             letter-spacing: -0.01em;
             padding: 80px 40px;
             max-width: 800px;
+            font-weight: 300;
             margin: 0 auto;
             -webkit-font-smoothing: antialiased;
         }
@@ -52,6 +54,14 @@
             font-weight: 600;
             margin-bottom: 16px;
             letter-spacing: -0.03em;
+        }
+
+        #about p {
+            font-size: 1.05rem;
+            color: var(--text-about);
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.01em;
+            line-height: 1.8;
         }
 
         .subtitle {
@@ -111,7 +121,7 @@
         }
 
         .pub-info strong {
-            font-weight: 600;
+            font-weight: 500;
             display: block;
             margin-bottom: 6px;
         }
@@ -152,7 +162,7 @@
         .date {
             font-family: "JetBrains Mono", monospace;
             font-size: 0.8rem;
-            color: #cccccc;
+            color: var(--text-main);
             text-align: right;
         }
 
@@ -163,8 +173,26 @@
             margin-bottom: 20px;
         }
 
+        /* 极简色块样式 */
+        .avatar-block {
+            position: absolute;
+            right: 20px;
+            top: 0;
+            width: 60px;
+            height: 170px;
+            background-color: #d9d9d9;
+            z-index: -1;
+            opacity: 0.6;
+        }
+
+        @media (max-width: 600px) {
+            .avatar-block {
+                visibility: hidden;
+            }
+        }
+
         .edu-item strong {
-            font-weight: 600;
+            font-weight: 500;
         }
 
         footer {
@@ -209,19 +237,18 @@
         <a href="https://scholar.google.com/citations?user=dCADJl0AAAAJ" target="_blank">Google Scholar</a>
     </nav>
 
-    <header>
-        <h1>Ruiyang Xu （徐瑞阳）</h1>
+    <header style="position: relative;"> <div class="avatar-block"></div> <h1>Ruiyang Xu （徐瑞阳）</h1>
         <p class="subtitle">Senior Undergraduate in Computer Science @ SJTU</p>
         <p class="subtitle">Research: Multimodal Learning</p>
         <p class="email-obfuscation" style="margin-top: 15px;">
-            Email: xry2022 [at] sjtu [dot] edu.cn
+            Email: xry2022 [at] sjtu.edu.cn
         </p>
     </header>
 
     <section id="about">
         <h2>About</h2>
-        <p>I am a senior CS student at Shanghai Jiao Tong University, advised by <a href="https://chenxie95.github.io/en">Prof. Xie Chen</a></p>
-        <p>My research focuses on fine-grained perception in Multimodal LLMs, specifically through audio-visual synergy. I am currently a Research Intern at Alibaba Qwen, where I contributed to the development of Qwen3-Omni, focusing on audio-visual captioning and agents.</p>
+        <p>I am a senior CS student at Shanghai Jiao Tong University, advised by <a href="https://chenxie95.github.io/en">Prof. Xie Chen</a>.</p>
+        <p>My research focuses on fine-grained perception in Multimodal LLMs, specifically through audio-visual synergy. I am currently a Research Intern at Alibaba Qwen, where I contributed to the development of <a href="https://arxiv.org/abs/2509.17765">Qwen3-Omni</a>, focusing on audio-visual captioning and agents.</p>
         <p>In my spare time, I listen to Britpop and J-rock.</p>
     </section>
 
