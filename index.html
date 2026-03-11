@@ -13,7 +13,7 @@
         :root {
             --bg-color: #ffffff;
             --text-main: #1a1a1a;
-            --text-about: #444;
+            --text-section: #444;
             --text-muted: #888888;
             --accent: #000000;
             --line: #f0f0f0;
@@ -56,17 +56,18 @@
             letter-spacing: -0.03em;
         }
 
-        #about p {
-            font-size: 1.05rem;
-            color: var(--text-about);
+        .text-section p {
+            font-size: 0.9rem;
+            color: var(--text-section);
             margin-bottom: 1.5rem;
+            font-weight: 350;
             letter-spacing: 0.01em;
             line-height: 1.8;
         }
 
         .subtitle {
             color: var(--text-muted);
-            font-size: 0.95rem;
+            font-size: 0.85rem;
             font-weight: 300;
             margin-bottom: 4px;
         }
@@ -123,23 +124,24 @@
         .pub-info strong {
             font-weight: 500;
             display: block;
+            font-size: 0.9rem;
             margin-bottom: 6px;
         }
 
         .pub-authors {
-            font-size: 0.9rem;
+            font-size: 0.75rem;
             font-weight: 300;
             color: var(--text-main);
         }
 
         .pub-authors b {
-            font-weight: 600;
+            font-weight: 550;
             text-decoration: none;
             border-bottom: 1px solid var(--text-main);
         }
 
         .pub-venue {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             font-family: "JetBrains Mono", monospace;
             color: var(--text-muted);
             margin-top: 6px;
@@ -153,7 +155,7 @@
 
         .pub-links a {
             font-family: "JetBrains Mono", monospace;
-            font-size: 0.75rem;
+            font-size: 0.8rem;
             border: 1px solid var(--line);
             padding: 3px 10px;
             border-radius: 0;
@@ -193,6 +195,7 @@
 
         .edu-item strong {
             font-weight: 500;
+            font-size: 0.9rem;
         }
 
         footer {
@@ -200,7 +203,7 @@
             padding: 40px 0;
             border-top: 1px solid var(--line);
             font-family: "JetBrains Mono", monospace;
-            font-size: 0.7rem;
+            font-size: 0.6rem;
             color: #bbb;
         }
 
@@ -245,11 +248,39 @@
         </p>
     </header>
 
-    <section id="about">
+    <section class="text-section">
         <h2>About</h2>
         <p>I am a senior CS student at Shanghai Jiao Tong University, advised by <a href="https://chenxie95.github.io/en">Prof. Xie Chen</a>.</p>
         <p>My research focuses on fine-grained perception in Multimodal LLMs, specifically through audio-visual synergy. I am currently a Research Intern at Alibaba Qwen, where I contributed to the development of <a href="https://arxiv.org/abs/2509.17765">Qwen3-Omni</a>, focusing on audio-visual captioning and agents.</p>
         <p>In my spare time, I listen to Britpop and J-rock.</p>
+    </section>
+
+    <section class="text-section">
+        <h2>News</h2>
+        <div style="max-height: 300px; overflow-y: auto; padding-right: 10px; font-size: 0.85rem;">
+            <ul style="list-style: none;">
+                <li style="margin-bottom: 12px; display: flex; align-items: flex-start;">
+                    <span style="min-width: 80px; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">2026.01</span>
+                    <span><a href="https://arxiv.org/abs/2510.12720">Omni-Captioner</a> accepted at ICLR 2026.</span>
+                </li>
+                <li style="margin-bottom: 12px; display: flex; align-items: flex-start;">
+                    <span style="min-width: 80px; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">2026.01</span>
+                    <span>Join our Audio Reasoning Challenge at Interspeech 2026. Check the <a href="https://audio-reasoning-challenge.github.io/">project page</a>.</span>
+                </li>
+                <li style="margin-bottom: 12px; display: flex; align-items: flex-start;">
+                    <span style="min-width: 80px; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">2025.09</span>
+                    <span>Qwen3-Omni is released. Check the <a href="https://qwen.ai/blog?id=65f766fc2dcba7905c1cb69cc4cab90e94126bf4">blog</a>.</span>
+                </li>
+                <li style="margin-bottom: 12px; display: flex; align-items: flex-start;">
+                    <span style="min-width: 80px; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">2025.09</span>
+                    <span><a href="https://github.com/ddlBoJack/MMAR/">MMAR</a> benchmark is accepted at NeurIPS 2025.</span>
+                </li>
+                <li style="margin-bottom: 12px; display: flex; align-items: flex-start;">
+                    <span style="min-width: 80px; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">2025.05</span>
+                    <span>SLAM-Omni is accepted to the ACL 2025 Findings.</span>
+                </li>
+            </ul>
+        </div>
     </section>
 
     <section id="publications">
