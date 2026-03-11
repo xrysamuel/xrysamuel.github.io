@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruiyang Xu | Academic Portfolio</title>
+    <meta name="description" content="Ruiyang Xu is a CS student at Shanghai Jiao Tong University (SJTU).">
+    <meta name="keywords" content="Ruiyang Xu, xrysamuel, 徐瑞阳, SJTU, Computer Science, Multimodal Learning, Qwen, Audio-Visual Learning, LLM">
+    <meta property="og:title" content="Ruiyang Xu | Academic Portfolio">
+    <meta property="og:description" content="Senior Undergraduate @ SJTU. Research Intern @ Alibaba Qwen.">
+    <meta property="og:type" content="website">
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-main: #1a1a1a;
+            --text-muted: #888888;
+            --accent: #000000;
+            --line: #f0f0f0;
+            --link-hover: #000000;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: "Inter", "SF Pro Display", "-apple-system", "BlinkMacSystemFont", "Helvetica Neue", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.7;
+            letter-spacing: -0.01em;
+            padding: 80px 40px;
+            max-width: 800px;
+            margin: 0 auto;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        nav {
+            display: flex;
+            justify-content: flex-end;
+            gap: 24px;
+            font-size: 0.8rem;
+            margin-bottom: 60px;
+            font-family: "JetBrains Mono", "SF Mono", monospace;
+            text-transform: lowercase;
+        }
+
+        header {
+            margin-bottom: 90px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+            letter-spacing: -0.03em;
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            font-weight: 300;
+            margin-bottom: 4px;
+        }
+
+        .email-obfuscation {
+            font-family: "JetBrains Mono", monospace;
+            font-size: 0.85rem;
+            margin-top: 20px;
+            color: var(--text-main);
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            border-bottom: 1px solid var(--line);
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--accent);
+            background-color: #f9f9f9;
+        }
+
+        section {
+            margin-bottom: 80px;
+        }
+
+        h2 {
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+        }
+
+        h2::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: var(--line);
+            margin-left: 20px;
+        }
+
+        .pub-item {
+            margin-bottom: 40px;
+            display: grid;
+            grid-template-columns: 1fr 100px;
+            gap: 30px;
+        }
+
+        .pub-info strong {
+            font-weight: 600;
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .pub-authors {
+            font-size: 0.9rem;
+            font-weight: 300;
+            color: var(--text-main);
+        }
+
+        .pub-authors b {
+            font-weight: 600;
+            text-decoration: none;
+            border-bottom: 1px solid var(--text-main);
+        }
+
+        .pub-venue {
+            font-size: 0.85rem;
+            font-family: "JetBrains Mono", monospace;
+            color: var(--text-muted);
+            margin-top: 6px;
+        }
+
+        .pub-links {
+            margin-top: 12px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .pub-links a {
+            font-family: "JetBrains Mono", monospace;
+            font-size: 0.75rem;
+            border: 1px solid var(--line);
+            padding: 3px 10px;
+            border-radius: 0;
+        }
+
+        .date {
+            font-family: "JetBrains Mono", monospace;
+            font-size: 0.8rem;
+            color: #cccccc;
+            text-align: right;
+        }
+
+        .edu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .edu-item strong {
+            font-weight: 600;
+        }
+
+        footer {
+            margin-top: 120px;
+            padding: 40px 0;
+            border-top: 1px solid var(--line);
+            font-family: "JetBrains Mono", monospace;
+            font-size: 0.7rem;
+            color: #bbb;
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 50px 24px; }
+            .pub-item { grid-template-columns: 1fr; gap: 10px; }
+            .date { text-align: left; order: -1; margin-bottom: 5px; }
+        }
+    </style>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Ruiyang Xu",
+            "alternateName": "徐瑞阳",
+            "url": "xrysamuel.github.io",
+            "affiliation": {
+                "@type": "Organization",
+                "name": "Shanghai Jiao Tong University"
+            },
+            "jobTitle": "Undergraduate Research Assistant",
+            "knowsAbout": ["Multimodal Learning", "Large Language Models", "Audio Processing"],
+            "sameAs": [
+                "https://github.com/xrysamuel",
+                "https://scholar.google.com/citations?user=dCADJl0AAAAJ"
+            ]
+        }
+    </script>
+</head>
+<body>
+
+    <nav>
+        <a href="https://github.com/xrysamuel" target="_blank">GitHub</a>
+        <a href="https://scholar.google.com/citations?user=dCADJl0AAAAJ" target="_blank">Google Scholar</a>
+    </nav>
+
+    <header>
+        <h1>Ruiyang Xu （徐瑞阳）</h1>
+        <p class="subtitle">Senior Undergraduate in Computer Science @ SJTU</p>
+        <p class="subtitle">Research: Multimodal Learning</p>
+        <p class="email-obfuscation" style="margin-top: 15px;">
+            Email: xry2022 [at] sjtu [dot] edu.cn
+        </p>
+    </header>
+
+    <section id="about">
+        <h2>About</h2>
+        <p>I am a senior CS student at Shanghai Jiao Tong University, advised by <a href="https://chenxie95.github.io/en">Prof. Xie Chen</a></p>
+        <p>My research focuses on fine-grained perception in Multimodal LLMs, specifically through audio-visual synergy. I am currently a Research Intern at Alibaba Qwen, where I contributed to the development of Qwen3-Omni, focusing on audio-visual captioning and agents.</p>
+        <p>In my spare time, I listen to Britpop and J-rock.</p>
+    </section>
+
+    <section id="publications">
+        <h2>Selected Publications</h2>
+
+        <div class="pub-item">
+            <div class="pub-info">
+                <strong>The Interspeech 2026 Audio Reasoning Challenge: Evaluating Reasoning Process Quality for Audio Reasoning Models and Agents</strong>
+                <div class="pub-authors">
+                    Ziyang Ma, <b>Ruiyang Xu</b>, Yinghao Ma, Chao-Han Huck Yang, Bohan Li, Jaeyeon Kim, Jin Xu, Jinyu Li, Carlos Busso, Kai Yu, Eng Siong Chng, Xie Chen
+                </div>
+                <div class="pub-venue">arxiv</div>
+                <div class="pub-links">
+                    <a href="https://arxiv.org/abs/2602.14224">Paper</a>
+                    <a href="https://audio-reasoning-challenge.github.io/">Page</a>
+                </div>
+            </div>
+            <span class="date">2026.02</span>
+        </div>
+        
+        <div class="pub-item">
+            <div class="pub-info">
+                <strong>Omni-Captioner: Data Pipeline, Models, and Benchmark for Omni Detailed Perception</strong>
+                <div class="pub-authors">
+                    Ziyang Ma*, <b>Ruiyang Xu</b>*, Zhenghao Xing*, Yunfei Chu, Yuxuan Wang, Jinzheng He, Jin Xu, Pheng-Ann Heng, Kai Yu, Junyang Lin, Eng Siong Chng, Xie Chen
+                </div>
+                <div class="pub-venue">Proc. ICLR 2026</div>
+                <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">* Equal contribution</p>
+                <div class="pub-links">
+                    <a href="https://arxiv.org/abs/2510.12720">Paper</a>
+                    <a href="https://github.com/ddlBoJack/Omni-Captioner">Code</a>
+                </div>
+            </div>
+            <span class="date">2025.10</span>
+        </div>
+
+        <div class="pub-item">
+            <div class="pub-info">
+                <strong>MMAR: A Challenging Benchmark for Deep Reasoning in Speech, Audio, Music, and Their Mix</strong>
+                <div class="pub-authors">
+                    Ziyang Ma, Yinghao Ma, Yanqiao Zhu, Chen Yang, Yi-Wen Chao, <b>Ruiyang Xu</b>, Wenxi Chen, Yuanzhe Chen, Zhuo Chen, Jian Cong, Kai Li, Keliang Li, Siyou Li, Xinfeng Li, Xiquan Li, Zheng Lian, Yuzhe Liang, Minghao Liu, Zhikang Niu, Tianrui Wang, Yuping Wang, Yuxuan Wang, Yihao Wu, Guanrou Yang, Jianwei Yu, Ruibin Yuan, Zhisheng Zheng, Ziya Zhou, Haina Zhu, Wei Xue, Emmanouil Benetos, Kai Yu, Eng-Siong Chng, Xie Chen
+                </div>
+                <div class="pub-venue">Proc. NeurIPS 2025</div>
+                <div class="pub-links">
+                    <a href="https://arxiv.org/abs/2505.13032">Paper</a>
+                    <a href="https://github.com/ddlBoJack/MMAR/">Github</a>
+                </div>
+            </div>
+            <span class="date">2025.05</span>
+        </div>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <div class="edu-item">
+            <div>
+                <strong>Shanghai Jiao Tong University</strong><br>
+                <span class="subtitle">B.S. in Computer Science</span>
+            </div>
+            <span class="date">2022 — Present</span>
+        </div>
+    </section>
+
+    <footer style="margin-top: 100px; padding-top: 20px; border-top: 1px solid var(--line); font-size: 0.75rem; color: var(--text-muted);">
+        &copy; 2026 xrysamuel.
+    </footer>
+
+</body>
+</html>
