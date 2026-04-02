@@ -9,14 +9,15 @@
     <meta property="og:title" content="Ruiyang Xu | Academic Portfolio">
     <meta property="og:description" content="Senior Undergraduate @ SJTU. Research Intern @ Alibaba Qwen.">
     <meta property="og:type" content="website">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <style>
         :root {
             --bg-color: #ffffff;
-            --text-main: hsl(240 10% 3.9%);
-            --text-muted: #8b8d98;
-            --accent: #000000;
-            --line: #f0f0f0;
-            --link-hover: #f6f6f6;
+            --text-main: hsl(240 10% 1%);
+            --text-muted: hsl(240 10% 40%);
+            --accent: hsl(240 10% 1%);
+            --line: hsl(240 10% 88%);
+            --link-hover: hsl(240 10% 95%);
             --font-stack-sans-serif: "Inter", "SF Pro Display", "-apple-system", "BlinkMacSystemFont", "Helvetica Neue", sans-serif;
             --font-stack-monospace: "JetBrains Mono", "SF Mono", monospace;
         }
@@ -174,16 +175,16 @@
             color: var(--text-main);
         }
 
-        .pub-authors b {
+        b {
             font-weight: 550;
             text-decoration: none;
-            border-bottom: 1px solid var(--text-main);
+            /* border-bottom: 1px solid var(--text-main); */
         }
 
         .pub-venue {
             font-size: 0.8rem;
             font-family: var(--font-stack-monospace);
-            color: var(--text-muted);
+            color: var(--text-main);
             margin-top: 6px;
         }
 
@@ -219,23 +220,6 @@
             font-weight: 500;
             font-size: 0.9rem;
         }
-
-        .avatar-block {
-            position: absolute;
-            right: 20px;
-            top: 0;
-            width: 60px;
-            height: 170px;
-            background-color: #d9d9d9;
-            z-index: -1;
-            opacity: 0.6;
-        }
-
-        @media (max-width: 600px) {
-            .avatar-block {
-                visibility: hidden;
-            }
-        }
     </style>
     <script type="application/ld+json">
         {
@@ -264,18 +248,21 @@
         <a href="https://scholar.google.com/citations?user=dCADJl0AAAAJ" target="_blank">Google Scholar</a>
     </nav>
 
-    <header style="position: relative;"> <div class="avatar-block"></div> <h1>Ruiyang Xu （徐瑞阳）</h1>
-        <p class="subtitle">Senior Undergraduate in Computer Science @ SJTU</p>
-        <p class="subtitle">Research: Multimodal Learning</p>
+    <header style="position: relative;"> <h1>Ruiyang Xu （徐瑞阳）</h1>
+        <p class="subtitle">Senior Undergraduate in CS</p>
+        <p class="subtitle">Shanghai Jiao Tong University (SJTU)</p>
+        <p class="subtitle">Minhang District, Shanghai, China</p>
         <p class="email-obfuscation" style="margin-top: 15px;">
             xry2022 [at] sjtu.edu.cn
         </p>
     </header>
 
+
+
     <section class="text-section">
         <h2>About</h2>
-        <p>I am a senior CS student at Shanghai Jiao Tong University, advised by <a href="https://chenxie95.github.io/en">Prof. Xie Chen</a>.</p>
-        <p>My research focuses on fine-grained perception in Multimodal LLMs, specifically through audio-visual synergy. I am currently a Research Intern at Alibaba Qwen, where I contributed to the development of <a href="https://arxiv.org/abs/2509.17765">Qwen3-Omni</a>, focusing on audio-visual captioning and agents.</p>
+        <p>I am a senior CS student at Shanghai Jiao Tong University, advised by <b><a href="https://chenxie95.github.io/en">Prof. Xie Chen</a></b>.</p>
+        <p>My research focuses on cutting-edge Multimodal Large Language Models (MLLMs), specifically multimodal reasoning and understanding. As a Research Intern at <b>Alibaba Qwen</b>, I have contributed to <a href="https://arxiv.org/abs/2509.17765">Qwen3-Omni</a> and <a href="https://qwen.ai/blog?id=qwen3.5-omni">Qwen3.5-Omni</a>, focusing on detailed captioning and agents.</p>
         <p>In my spare time, I listen to Britpop and J-rock.</p>
     </section>
 
@@ -284,8 +271,16 @@
         <div class="news">
             <ul class="news-list">
                 <li class="news-list-item">
+                    <span class="news-date">2026.03</span>
+                    <span>Released <a href="https://qwen.ai/blog?id=qwen3.5-omni">Qwen3.5-Omni</a>, featuring superior performance in <b>audio-visual detailed captioning</b>.</span>
+                </li>
+                <li class="news-list-item">
+                    <span class="news-date">2026.03</span>
+                    <span>Check out <a href="https://huggingface.co/datasets/BoJack/Omni-Cloze">Omni-Cloze</a>, a novel benchmark dedicated to multimodal detailed captioning.</span>
+                </li>
+                <li class="news-list-item">
                     <span class="news-date">2026.01</span>
-                    <span><a href="https://arxiv.org/abs/2510.12720">Omni-Captioner</a> accepted at ICLR 2026.</span>
+                    <span><a href="https://arxiv.org/abs/2510.12720">Omni-Captioner</a> accepted at <b>ICLR 2026</b>.</span>
                 </li>
                 <li class="news-list-item">
                     <span class="news-date">2026.01</span>
@@ -297,11 +292,11 @@
                 </li>
                 <li class="news-list-item">
                     <span class="news-date">2025.09</span>
-                    <span><a href="https://github.com/ddlBoJack/MMAR/">MMAR</a> benchmark is accepted at NeurIPS 2025.</span>
+                    <span><a href="https://github.com/ddlBoJack/MMAR/">MMAR</a> benchmark is accepted at <b>NeurIPS 2025</b>.</span>
                 </li>
                 <li class="news-list-item">
                     <span class="news-date">2025.05</span>
-                    <span>SLAM-Omni is accepted to the ACL 2025 Findings.</span>
+                    <span>SLAM-Omni is accepted to the <b>ACL 2025 Findings</b>.</span>
                 </li>
             </ul>
         </div>
@@ -331,11 +326,12 @@
                 <div class="pub-authors">
                     Ziyang Ma*, <b>Ruiyang Xu</b>*, Zhenghao Xing*, Yunfei Chu, Yuxuan Wang, Jinzheng He, Jin Xu, Pheng-Ann Heng, Kai Yu, Junyang Lin, Eng Siong Chng, Xie Chen
                 </div>
-                <div class="pub-venue">Proc. ICLR 2026</div>
+                <div class="pub-venue">ICLR 2026</div>
                 <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">* Equal contribution</p>
                 <div class="pub-links">
                     <a href="https://arxiv.org/abs/2510.12720">Paper</a>
                     <a href="https://github.com/ddlBoJack/Omni-Captioner">Code</a>
+                    <a href="https://huggingface.co/datasets/BoJack/Omni-Cloze">Benchmark</a>
                 </div>
             </div>
             <span class="pub-date">2025.10</span>
@@ -347,7 +343,7 @@
                 <div class="pub-authors">
                     Ziyang Ma, Yinghao Ma, Yanqiao Zhu, Chen Yang, Yi-Wen Chao, <b>Ruiyang Xu</b>, Wenxi Chen, Yuanzhe Chen, Zhuo Chen, Jian Cong, Kai Li, Keliang Li, Siyou Li, Xinfeng Li, Xiquan Li, Zheng Lian, Yuzhe Liang, Minghao Liu, Zhikang Niu, Tianrui Wang, Yuping Wang, Yuxuan Wang, Yihao Wu, Guanrou Yang, Jianwei Yu, Ruibin Yuan, Zhisheng Zheng, Ziya Zhou, Haina Zhu, Wei Xue, Emmanouil Benetos, Kai Yu, Eng-Siong Chng, Xie Chen
                 </div>
-                <div class="pub-venue">Proc. NeurIPS 2025</div>
+                <div class="pub-venue">NeurIPS 2025</div>
                 <div class="pub-links">
                     <a href="https://arxiv.org/abs/2505.13032">Paper</a>
                     <a href="https://github.com/ddlBoJack/MMAR/">Github</a>
@@ -355,6 +351,38 @@
             </div>
             <span class="pub-date">2025.05</span>
         </div>
+
+        <div class="pub-item">
+            <div class="pub-info">
+                <strong>SLAM-Omni: Timbre-Controllable Voice Interaction System with Single-Stage Training</strong>
+                <div class="pub-authors">
+                    Wenxi Chen, Ziyang Ma, Ruiqi Yan, Yuzhe Liang, Xiquan Li, <b>Ruiyang Xu</b>, Zhikang Niu, Yanqiao Zhu, Yifan Yang, Zhanxun Liu, Kai Yu, Yuxuan Hu, Jinyu Li, Yan Lu, Shujie Liu, Xie Chen
+                </div>
+                <div class="pub-venue">Findings of ACL 2025</div>
+                <div class="pub-links">
+                    <a href="https://aclanthology.org/2025.findings-acl.115.pdf">Paper</a>
+                    <a href="https://aclanthology.org/2025.findings-acl.115/">Anthology</a>
+                </div>
+            </div>
+            <span class="pub-date">2025.07</span>
+        </div>
+
+        <div class="pub-item">
+            <div class="pub-info">
+                <strong>SLAM-LLM: A Modular, Open-Source Multimodal Large Language Model Framework and Best Practice for Speech, Language, Audio and Music Processing</strong>
+                <div class="pub-authors">
+                    Ziyang Ma, Guanrou Yang, Wenxi Chen, Zhifu Gao, Yexing Du, Xiquan Li, Zhisheng Zheng, Haina Zhu, Jianheng Zhuo, Zheshu Song, <b>Ruiyang Xu</b>, Tiranrui Wang, Yifan Yang, Yanqiao Zhu, Zhikang Niu, Liumeng Xue, Yinghao Ma, Ruibin Yuan, Shiliang Zhang, Kai Yu, Eng Siong Chng, Xie Chen
+                </div>
+                <div class="pub-venue">IEEE JSTSP</div>
+                <div class="pub-links">
+                    <a href="https://arxiv.org/abs/2601.09385">Paper</a>
+                    <a href="https://github.com/X-LANCE/SLAM-LLM">Github</a>
+                </div>
+            </div>
+            <span class="pub-date">2026.01</span>
+        </div>
+
+        
     </section>
 
     <section id="education">

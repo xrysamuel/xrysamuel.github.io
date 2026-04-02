@@ -1,0 +1,43 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    /* 定义基本样式：使用 currentColor 关键字，
+       这允许图标继承其父级元素的文本颜色。
+       如果未设置父级颜色，则默认为黑色。
+    */
+    .dynamic-square {
+      fill: currentColor;
+    }
+
+    /* =========================================
+       浅色模式 (Light Mode) 默认设置
+       使用半透明的黑色 (rgba(0,0,0,...))
+       =========================================
+    */
+    #sq1 { opacity: 0.7; } /* 最底层，较不透明 */
+    #sq2 { opacity: 0.5; } /* 中间层，中等透明 */
+    #sq3 { opacity: 0.3; } /* 最上层，最透明 */
+
+    /* =========================================
+       深色模式 (Dark Mode) 媒体查询
+       当检测到深色模式时，覆盖上述设置，
+       改为使用白色，并应用透明度递减效果。
+       =========================================
+    */
+    @media (prefers-color-scheme: dark) {
+      .dynamic-square {
+        fill: #ffffff; /* 切换为白色 */
+      }
+      /* 深色模式下的透明度设置（依次递减） */
+      #sq1 { opacity: 0.62; } /* 最底层，白色的 62% 透明度 */
+      #sq2 { opacity: 0.5; } /* 中间层，白色的 50% 透明度 */
+      #sq3 { opacity: 0.38; } /* 最上层，白色的 38% 透明度 */
+    }
+  </style>
+
+  <rect id="sq1" class="dynamic-square" x="0" y="0" width="19.777" height="19.777"/>
+  
+  <rect id="sq2" class="dynamic-square" x="6.111" y="6.111" width="19.777" height="19.777"/>
+  
+  <rect id="sq3" class="dynamic-square" x="12.223" y="12.223" width="19.777" height="19.777"/>
+
+</svg>
