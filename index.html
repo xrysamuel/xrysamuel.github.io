@@ -20,6 +20,18 @@
             --link-hover: hsl(240 10% 95%);
             --font-stack-sans-serif: "Inter", "SF Pro Display", "-apple-system", "BlinkMacSystemFont", "Helvetica Neue", sans-serif;
             --font-stack-monospace: "JetBrains Mono", "SF Mono", monospace;
+
+            /* Font Sizes - using clamp() for smooth transitions */
+            --fs-h1: 2rem;
+            --fs-h1-cn: 1.88rem;
+            --fs-h2: 0.7rem;
+            --fs-nav: 0.8rem;
+
+            --fs-p: clamp(0.8rem, 2.2vw, 0.9rem);
+            --fs-subtitle: clamp(0.75rem, 2vw, 0.85rem);
+            --fs-small: clamp(0.7rem, 1.8vw, 0.8rem);
+            --fs-xs: clamp(0.65rem, 1.6vw, 0.75rem);
+            --fs-footer: clamp(0.55rem, 1.4vw, 0.6rem);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -35,13 +47,15 @@
             font-weight: 300;
             margin: 0 auto;
             -webkit-font-smoothing: antialiased;
+
+            transition: padding 0.3s ease-in-out, font-size 0.3s ease-in-out;;
         }
 
         nav {
             display: flex;
             justify-content: flex-end;
             gap: 24px;
-            font-size: 0.8rem;
+            font-size: var(--fs-nav);
             margin-bottom: 60px;
             font-family: var(--font-stack-monospace);
             text-transform: lowercase;
@@ -52,7 +66,7 @@
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: var(--fs-h1);
             font-weight: 600;
             margin-bottom: 16px;
             letter-spacing: -0.03em;
@@ -75,7 +89,7 @@
         }
 
         h2 {
-            font-size: 0.7rem;
+            font-size: var(--fs-h2);
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.25em;
@@ -83,6 +97,17 @@
             margin-bottom: 40px;
             display: flex;
             align-items: center;
+        }
+
+        h1 .cn {
+            color: var(--text-muted);
+            font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", "Hiragino Sans GB", system-ui, sans-serif;
+            font-weight: 500;
+            letter-spacing: 0.015em;
+            font-size: var(--fs-h1-cn);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
         }
 
         h2::after {
@@ -98,18 +123,12 @@
             padding: 40px 0;
             border-top: 1px solid var(--line);
             font-family: var(--font-stack-monospace);
-            font-size: 0.6rem;
+            font-size: var(--fs-footer);
             color: var(--text-muted);
         }
 
-        @media (max-width: 600px) {
-            body { padding: 50px 24px; }
-            .pub-item { grid-template-columns: 1fr; gap: 10px; }
-            .date { text-align: left; order: -1; margin-bottom: 5px; }
-        }
-
         .text-section p {
-            font-size: 0.9rem;
+            font-size: var(--fs-p);
             margin-bottom: 1.5rem;
             font-weight: 350;
             letter-spacing: 0.01em;
@@ -118,14 +137,14 @@
 
         .subtitle {
             color: var(--text-muted);
-            font-size: 0.85rem;
+            font-size: var(--fs-subtitle);
             font-weight: 300;
             margin-bottom: 4px;
         }
 
         .email-obfuscation {
             font-family: var(--font-stack-monospace);
-            font-size: 0.85rem;
+            font-size: var(--fs-subtitle);
             margin-top: 20px;
             color: var(--text-main);
         }
@@ -134,7 +153,7 @@
             max-height: 300px;
             overflow-y: auto;
             padding-right: 10px;
-            font-size: 0.9rem;
+            font-size: var(--fs-p);
         }
 
         .news-list {
@@ -150,7 +169,7 @@
         .news-date {
             min-width: 80px;
             font-family: var(--font-stack-monospace);
-            font-size: 0.8rem;
+            font-size: var(--fs-small);
             color: var(--text-main);
             margin-top: 4px;
         }
@@ -165,12 +184,12 @@
         .pub-info strong {
             font-weight: 500;
             display: block;
-            font-size: 0.9rem;
+            font-size: var(--fs-p);
             margin-bottom: 6px;
         }
 
         .pub-authors {
-            font-size: 0.75rem;
+            font-size: var(--fs-xs);
             font-weight: 300;
             color: var(--text-main);
         }
@@ -178,11 +197,10 @@
         b {
             font-weight: 550;
             text-decoration: none;
-            /* border-bottom: 1px solid var(--text-main); */
         }
 
         .pub-venue {
-            font-size: 0.8rem;
+            font-size: var(--fs-small);
             font-family: var(--font-stack-monospace);
             color: var(--text-main);
             margin-top: 6px;
@@ -196,7 +214,7 @@
 
         .pub-links a {
             font-family: var(--font-stack-monospace);
-            font-size: 0.8rem;
+            font-size: var(--fs-small);
             border: 1px solid var(--line);
             padding: 3px 10px;
             border-radius: 0;
@@ -204,7 +222,7 @@
 
         .pub-date {
             font-family: var(--font-stack-monospace);
-            font-size: 0.8rem;
+            font-size: var(--fs-small);
             color: var(--text-main);
             text-align: right;
         }
@@ -218,7 +236,31 @@
 
         .edu-item strong {
             font-weight: 500;
-            font-size: 0.9rem;
+            font-size: var(--fs-p);
+        }
+
+        /* 响应式调整 (Responsive modifications) */
+        @media (max-width: 600px) {
+            /* :root {
+                --fs-p: 0.8rem;
+                --fs-subtitle: 0.75rem;
+                --fs-small: 0.7rem;
+                --fs-xs: 0.65rem;
+                --fs-footer: 0.55rem;
+            } */
+
+            body { padding: 50px 24px; }
+            
+            .pub-item { grid-template-columns: 1fr; gap: 10px; }
+            
+            .edu-item { flex-direction: column; gap: 5px; }
+
+            /* 第二栏日期移到条目上方 */
+            .pub-date { 
+                text-align: left; 
+                order: -1; 
+                margin-bottom: 4px; 
+            }
         }
     </style>
     <script type="application/ld+json">
@@ -242,13 +284,13 @@
     </script>
 </head>
 <body>
-
     <nav>
         <a href="https://github.com/xrysamuel" target="_blank">GitHub</a>
         <a href="https://scholar.google.com/citations?user=dCADJl0AAAAJ" target="_blank">Google Scholar</a>
     </nav>
-
-    <header style="position: relative;"> <h1>Ruiyang Xu （徐瑞阳）</h1>
+    
+    <main>
+    <header style="position: relative;"> <h1>Ruiyang Xu&nbsp;&nbsp;&nbsp;<span class="cn">徐瑞阳</span></h1>
         <p class="subtitle">Senior Undergraduate in CS</p>
         <p class="subtitle">Shanghai Jiao Tong University (SJTU)</p>
         <p class="subtitle">Minhang District, Shanghai, China</p>
@@ -327,7 +369,7 @@
                     Ziyang Ma*, <b>Ruiyang Xu</b>*, Zhenghao Xing*, Yunfei Chu, Yuxuan Wang, Jinzheng He, Jin Xu, Pheng-Ann Heng, Kai Yu, Junyang Lin, Eng Siong Chng, Xie Chen
                 </div>
                 <div class="pub-venue">ICLR 2026</div>
-                <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">* Equal contribution</p>
+                <p style="font-size: var(--fs-xs); color: var(--text-muted); margin-top: 4px;">* Equal contribution</p>
                 <div class="pub-links">
                     <a href="https://arxiv.org/abs/2510.12720">Paper</a>
                     <a href="https://github.com/ddlBoJack/Omni-Captioner">Code</a>
@@ -395,8 +437,9 @@
             <span class="pub-date">2022 — Present</span>
         </div>
     </section>
+    </main>
 
-    <footer style="margin-top: 100px; padding-top: 20px; border-top: 1px solid var(--line); font-size: 0.75rem; color: var(--text-muted);">
+    <footer style="margin-top: 100px; padding-top: 20px; border-top: 1px solid var(--line); font-size: var(--fs-xs); color: var(--text-muted);">
         &copy; 2026 xrysamuel.
     </footer>
 
