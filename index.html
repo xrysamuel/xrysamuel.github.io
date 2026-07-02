@@ -7,7 +7,7 @@
     <meta name="description" content="Ruiyang Xu is a CS student at Shanghai Jiao Tong University (SJTU).">
     <meta name="keywords" content="Ruiyang Xu, xrysamuel, 徐瑞阳, SJTU, Computer Science, Multimodal Learning, Qwen, Audio-Visual Learning, LLM">
     <meta property="og:title" content="Ruiyang Xu | Academic Portfolio">
-    <meta property="og:description" content="Senior Undergraduate @ SJTU. Research Intern @ Alibaba Qwen.">
+    <meta property="og:description" content="M.S Student @ SJTU. Research Intern @ Alibaba Qwen.">
     <meta property="og:type" content="website">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <style>
@@ -218,6 +218,125 @@
             border: 1px solid var(--line);
             padding: 3px 10px;
             border-radius: 0;
+            background: transparent;
+            color: inherit;
+            line-height: inherit;
+        }
+
+        .pub-links a:hover {
+            background-color: var(--link-hover);
+            border-color: var(--accent);
+        }
+
+        .figure-link {
+            position: relative;
+            cursor: zoom-in;
+        }
+
+        .figure-preview {
+            position: absolute;
+            left: calc(100% + 12px);
+            top: 50%;
+            transform: translateY(-50%);
+            width: 220px;
+            padding: 6px;
+            border: 1px solid var(--line);
+            background: var(--bg-color);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.10);
+
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+
+            /* 移开：立刻淡出 */
+            transition:
+                opacity 0.15s ease,
+                visibility 0s linear 0.15s;
+
+            z-index: 20;
+        }
+
+        .figure-link:hover .figure-preview,
+        .figure-link:focus .figure-preview {
+            opacity: 1;
+            visibility: visible;
+
+            /* 移入：等待 0.6s 后出现 */
+            transition:
+                opacity 0.2s ease 0.6s,
+                visibility 0s linear 0.6s;
+        }
+
+        .figure-preview img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        /* 大图弹窗 */
+        .figure-modal {
+            position: fixed;
+            inset: 0;
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.86);
+            backdrop-filter: blur(8px);
+
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+
+            transition:
+                opacity 0.22s ease,
+                visibility 0s linear 0.22s;
+        }
+
+        .figure-modal.is-open {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+
+            transition:
+                opacity 0.22s ease,
+                visibility 0s linear 0s;
+        }
+
+        .figure-modal img {
+            max-width: min(100%, 1000px);
+            max-height: 86vh;
+            border: 1px solid var(--line);
+            background: var(--bg-color);
+            box-shadow: 0 24px 80px rgba(0, 0, 0, 0.18);
+
+            opacity: 0;
+            transform: scale(0.985);
+            transition:
+                opacity 0.22s ease,
+                transform 0.22s ease;
+        }
+
+        .figure-modal.is-open img {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .figure-modal-close {
+            position: fixed;
+            top: 24px;
+            right: 28px;
+            font-family: var(--font-stack-monospace);
+            font-size: var(--fs-small);
+            cursor: pointer;
+        }
+
+        /* 移动端：hover 不可靠，隐藏小图预览，只保留点击大图 */
+        @media (max-width: 600px) {
+            .figure-preview {
+                display: none;
+            }
         }
 
         .pub-date {
@@ -274,7 +393,7 @@
                 "@type": "Organization",
                 "name": "Shanghai Jiao Tong University"
             },
-            "jobTitle": "Undergraduate Research Assistant",
+            "jobTitle": "M.S. Student",
             "knowsAbout": ["Multimodal Learning", "Large Language Models", "Audio Processing"],
             "sameAs": [
                 "https://github.com/xrysamuel",
@@ -291,7 +410,7 @@
     
     <main>
     <header style="position: relative;"> <h1>Ruiyang Xu&nbsp;&nbsp;&nbsp;<span class="cn">徐瑞阳</span></h1>
-        <p class="subtitle">Senior Undergraduate in CS</p>
+        <p class="subtitle">M.S. Student in CS</p>
         <p class="subtitle">Shanghai Jiao Tong University (SJTU)</p>
         <p class="subtitle">Minhang District, Shanghai, China</p>
         <p class="email-obfuscation" style="margin-top: 15px;">
@@ -303,8 +422,9 @@
 
     <section class="text-section">
         <h2>About</h2>
-        <p>I am a senior CS student at Shanghai Jiao Tong University, advised by <b><a href="https://chenxie95.github.io/en">Prof. Xie Chen</a></b>.</p>
+        <p>I am a graduate student in computer science at Shanghai Jiao Tong University, advised by <b><a href="https://chenxie95.github.io/en">Prof. Xie Chen</a></b>.</p>
         <p>My research focuses on cutting-edge Multimodal Large Language Models (MLLMs), specifically multimodal reasoning and understanding. As a Research Intern at <b>Alibaba Qwen</b>, I have contributed to <a href="https://arxiv.org/abs/2509.17765">Qwen3-Omni</a> and <a href="https://qwen.ai/blog?id=qwen3.5-omni">Qwen3.5-Omni</a>, focusing on detailed captioning and agents.</p>
+        <p>I have been involved in several research projects in multimodal reasoning, omni-modal perception, and audio understanding, some of which have appeared at <b>ICML</b>, <b>ICLR</b>, and <b>NeurIPS</b>.</p>
         <p>In my spare time, I listen to Britpop and J-rock.</p>
     </section>
 
@@ -312,6 +432,24 @@
         <h2>News</h2>
         <div class="news">
             <ul class="news-list">
+                <li class="news-list-item">
+                    <span class="news-date">2026.06</span>
+                    <span>
+                        Released <a href="https://github.com/ddlBoJack/MMAE">MMAE</a>, the first comprehensive benchmark for instruction-based audio editing.
+                    </span>
+                </li>
+                <li class="news-list-item">
+                    <span class="news-date">2026.06</span>
+                    <span>
+                        OmniAgent is now open-sourced — <a href="https://github.com/harryhsing/omniagent">code</a>, <a href="https://arxiv.org/abs/2606.19341">paper</a>, and <a href="https://huggingface.co/harryhsing/OmniAgent-RL-7B">models</a> all available.
+                    </span>
+                </li>
+                <li class="news-list-item">
+                    <span class="news-date">2026.05</span>
+                    <span>
+                        <a href="https://arxiv.org/abs/2606.19341">OmniAgent</a> introducing native active perception has been accepted to <b>ICML 2026</b>.
+                    </span>
+                </li>
                 <li class="news-list-item">
                     <span class="news-date">2026.03</span>
                     <span>Released <a href="https://qwen.ai/blog?id=qwen3.5-omni">Qwen3.5-Omni</a>, featuring superior performance in <b>audio-visual detailed captioning</b>.</span>
@@ -349,11 +487,36 @@
 
         <div class="pub-item">
             <div class="pub-info">
+                <strong>Native Active Perception as Reasoning for Omni-Modal Understanding</strong>
+                <div class="pub-authors">
+                    Zhenghao Xing*, <b>Ruiyang Xu</b>*, Yuxuan Wang*, Jinzheng He, Ziyang Ma, Qize Yang, Yunfei Chu, Jin Xu, Junyang Lin, Chi-Wing Fu, Pheng-Ann Heng
+                </div>
+                <div class="pub-venue">ICML 2026</div>
+                <p style="font-size: var(--fs-xs); color: var(--text-muted); margin-top: 4px;">* Equal contribution</p>
+                <div class="pub-links">
+                    <a href="https://arxiv.org/abs/2606.19341">Paper</a>
+                    <a href="https://github.com/harryhsing/omniagent">Code</a>
+                    <a href="https://huggingface.co/harryhsing/OmniAgent-RL-7B">Models</a>
+                    <a class="figure-link js-figure-link"
+                        href="assets/omniagent.png"
+                        aria-label="Preview OmniAgent figure">
+                        Figure
+                        <span class="figure-preview" aria-hidden="true">
+                            <img src="assets/omniagent.png" alt="">
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <span class="pub-date">2026.06</span>
+        </div>
+
+        <div class="pub-item">
+            <div class="pub-info">
                 <strong>The Interspeech 2026 Audio Reasoning Challenge: Evaluating Reasoning Process Quality for Audio Reasoning Models and Agents</strong>
                 <div class="pub-authors">
                     Ziyang Ma, <b>Ruiyang Xu</b>, Yinghao Ma, Chao-Han Huck Yang, Bohan Li, Jaeyeon Kim, Jin Xu, Jinyu Li, Carlos Busso, Kai Yu, Eng Siong Chng, Xie Chen
                 </div>
-                <div class="pub-venue">arxiv</div>
+                <div class="pub-venue">Interspeech 2026</div>
                 <div class="pub-links">
                     <a href="https://arxiv.org/abs/2602.14224">Paper</a>
                     <a href="https://audio-reasoning-challenge.github.io/">Page</a>
@@ -381,6 +544,29 @@
 
         <div class="pub-item">
             <div class="pub-info">
+                <strong>MMAE: A Massive Multitask Audio Editing Benchmark</strong>
+                <div class="pub-authors">
+                    Ziyang Ma, Ruiqi Yan, <b>Ruiyang Xu</b>, Jie Fang, Zhikang Niu, Yi-Wen Chao, Wenming Tu, Tianrui Wang, Auden, Qi Chen, Wenxi Chen, Jiaying Chi, Yanru Huo, Zixuan Jiang, Xiquan Li, Yalin Li, Junxi Liu, Minghao Liu, Binghao Qiang, Yijia Shan, Zheshu Song, Tian Tan, Zixiang Wang, Zeyu Xie, Zhifei Xie, Xiaoyu Xing, Qixiang Xu, Chen Yang, Guanrou Yang, Shan Yang, Yifan Yang, Steve Yves, Haotian Zhang, Haina Zhu, Kai Yu, Liefeng Bo, Eng-Siong Chng, Xie Chen
+                </div>
+                <div class="pub-venue">arxiv</div>
+                <div class="pub-links">
+                    <a href="https://arxiv.org/abs/2606.07229">Paper</a>
+                    <a href="https://github.com/ddlBoJack/MMAE">Github</a>
+                    <a class="figure-link js-figure-link"
+                        href="assets/mmae.png"
+                        aria-label="Preview MMAE figure">
+                        Figure
+                        <span class="figure-preview" aria-hidden="true">
+                            <img src="assets/mmae.png" alt="">
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <span class="pub-date">2026.06</span>
+        </div>
+
+        <div class="pub-item">
+            <div class="pub-info">
                 <strong>MMAR: A Challenging Benchmark for Deep Reasoning in Speech, Audio, Music, and Their Mix</strong>
                 <div class="pub-authors">
                     Ziyang Ma, Yinghao Ma, Yanqiao Zhu, Chen Yang, Yi-Wen Chao, <b>Ruiyang Xu</b>, Wenxi Chen, Yuanzhe Chen, Zhuo Chen, Jian Cong, Kai Li, Keliang Li, Siyou Li, Xinfeng Li, Xiquan Li, Zheng Lian, Yuzhe Liang, Minghao Liu, Zhikang Niu, Tianrui Wang, Yuping Wang, Yuxuan Wang, Yihao Wu, Guanrou Yang, Jianwei Yu, Ruibin Yuan, Zhisheng Zheng, Ziya Zhou, Haina Zhu, Wei Xue, Emmanouil Benetos, Kai Yu, Eng-Siong Chng, Xie Chen
@@ -389,6 +575,14 @@
                 <div class="pub-links">
                     <a href="https://arxiv.org/abs/2505.13032">Paper</a>
                     <a href="https://github.com/ddlBoJack/MMAR/">Github</a>
+                    <a class="figure-link js-figure-link"
+                        href="assets/mmar.png"
+                        aria-label="Preview MMAR figure">
+                        Figure
+                        <span class="figure-preview" aria-hidden="true">
+                            <img src="assets/mmar.png" alt="">
+                        </span>
+                    </a>
                 </div>
             </div>
             <span class="pub-date">2025.05</span>
@@ -429,12 +623,21 @@
 
     <section id="education">
         <h2>Education</h2>
+    
+        <div class="edu-item">
+            <div>
+                <strong>Shanghai Jiao Tong University</strong><br>
+                <span class="subtitle">M.S. in Computer Science</span>
+            </div>
+            <span class="pub-date">2026 — Present</span>
+        </div>
+    
         <div class="edu-item">
             <div>
                 <strong>Shanghai Jiao Tong University</strong><br>
                 <span class="subtitle">B.S. in Computer Science</span>
             </div>
-            <span class="pub-date">2022 — Present</span>
+            <span class="pub-date">2022 — 2026</span>
         </div>
     </section>
     </main>
@@ -444,4 +647,53 @@
     </footer>
 
 </body>
+
+<div class="figure-modal" id="figure-modal" aria-hidden="true">
+    <a href="#" class="figure-modal-close" id="figure-modal-close">Close</a>
+    <img id="figure-modal-img" src="" alt="Publication figure preview">
+</div>
+
+<script>
+    const figureModal = document.getElementById("figure-modal");
+    const figureModalImg = document.getElementById("figure-modal-img");
+    const figureModalClose = document.getElementById("figure-modal-close");
+
+    document.querySelectorAll(".js-figure-link").forEach((link) => {
+        link.addEventListener("click", (event) => {
+            event.preventDefault();
+
+            const fullSrc = link.getAttribute("href");
+            figureModalImg.src = fullSrc;
+            figureModal.classList.add("is-open");
+            figureModal.setAttribute("aria-hidden", "false");
+        });
+    });
+
+    function closeFigureModal(event) {
+        if (event) event.preventDefault();
+
+        figureModal.classList.remove("is-open");
+        figureModal.setAttribute("aria-hidden", "true");
+
+        setTimeout(() => {
+            if (!figureModal.classList.contains("is-open")) {
+                figureModalImg.src = "";
+            }
+        }, 220);
+    }
+
+    figureModalClose.addEventListener("click", closeFigureModal);
+
+    figureModal.addEventListener("click", (event) => {
+        if (event.target === figureModal) {
+            closeFigureModal(event);
+        }
+    });
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && figureModal.classList.contains("is-open")) {
+            closeFigureModal(event);
+        }
+    });
+</script>
 </html>
